@@ -11,7 +11,7 @@
 E:\George\Kimi (메인 저장소 - 죠지 관리)
 ├── .git/
 ├── .gitmodules              ← 서브모듈 설정
-├── project/                   ← 프로젝트 메타 정보 폴더
+├── project/                   ← 프로젝트 메타 정보 폴더 (소문자: project)
 │   ├── project001/          ← (최초 프로젝트)
 │   ├── project002/          ← (향후 프로젝트)
 │   └── ...
