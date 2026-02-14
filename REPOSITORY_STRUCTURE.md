@@ -110,6 +110,40 @@ git submodule update --remote
 
 ---
 
+## ⚠️ 중요: mcjo.pro 히스토리 관리 규칙 (필수)
+
+### 기본 원칙
+
+**신규 프로젝트 생성 지시가 메인 mcjo.pro에서 이루어진 경우**, 처리 기록은 **신규 프로젝트의 mcjo.pro**에 남겨야 합니다.
+
+| 상황 | 히스토리 기록 위치 | 예시 |
+|------|-------------------|------|
+| 메인 mcjo.pro에서 "project003 생성해" 지시 | project003/mcjo.pro의 HISTORY | `[DONE] project003 생성 완료` |
+| project002/mcjo.pro에서 작업 지시 | project002/mcjo.pro의 HISTORY | `[DONE] 버그 수정 완료` |
+| 메인 mcjo.pro에서 일반적인 질문/지시 | 메인 mcjo.pro의 HISTORY | `[DONE] 개발 환경 문의` |
+
+### 처리 흐름
+
+```
+[메인 mcjo.pro INPUT 확인]
+    ↓ (신규 프로젝트 생성 지시인 경우)
+[해당 프로젝트 폴터 및 mcjo.pro 생성]
+    ↓
+[작업 수행]
+    ↓
+[신규 프로젝트의 mcjo.pro에 HISTORY 기록] ← 중요!
+    ↓
+[메인 mcjo.pro는 INPUT만 비우고 HISTORY에는 기록하지 않음]
+```
+
+### 주의사항
+
+- ❌ 메인 mcjo.pro에 신규 프로젝트 생성 기록을 남기지 않음
+- ✅ 각 프로젝트의 작업 이력은 해당 프로젝트의 mcjo.pro에 독립적으로 관리
+- ✅ 프로젝트별 mcjo.pro가 우선순위를 가짐 (스킬 문서 참고)
+
+---
+
 ## 🔄 관리 패턴 (George/George-repo 방식)
 
 이 저장소 구조는 `George/George-repo` 패턴을 따릅니다:
