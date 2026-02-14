@@ -98,7 +98,7 @@
 #### 🔒 반드시 운영자 승인 필요
 
 - Git 릴리즈 작업 (`push`, `merge`, `rebase to main`)
-- `E:\Work\George\` 외부 경로 접근 및 수정
+- `E:\George\Kimi\`, `E:\George\Kimi-repo\` 외부 경로 접근 및 수정
 - NuGet / pip / vcpkg 등 새 패키지 추가
 - 기존 public 인터페이스 시그니처 변경
 - 보안 관련 코드 수정 (암호화, 인증, 권한)
