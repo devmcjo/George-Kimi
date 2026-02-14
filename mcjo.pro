@@ -9,7 +9,24 @@
 # [INPUT] - 새 지시사항 작성 영역
 # ============================================
 >>>
+다음 내용을 모두 확인하고, 잘못 알고있는 내용이 있다면 바로잡아. 잘못 알고 있는 내용에 대해선 문서(.md)도 수정해.
 
+죠지 메타 인지 폴더 (메인 폴더)
+로컬 : E:\George\Kimi
+원격 : https://github.com/devmcjo/George-Kimi
+
+개발 산출물 (소스코드 등)
+로컬 : E:\George\Kimi-repo
+원격 : https://github.com/devmcjo/George-Kimi-repo
+
+
+신규 개발 혹은 신규 프로젝트 진행 시 
+E:\George\Kimi\Project\
+경로 하위로 project001, project002, projectNNN 처럼 1씩 늘려가며 프로젝트 관리함.
+모든 프로젝트의 개발 산출물은 해당 경로가 아님. 여기는 프로젝트의 메타 인지를 위한 정보들만 보관함.(프로젝트 개발 계획(phase1-description.md 등) 수립 파일 혹은 프로젝트 지시 내용)
+mcjo.pro 파일도 projectNNN 폴더 내부에 존재함. mcjo.pro 파일의 우선순위도 project 폴더 내의 mcjo.pro가 우선순위를 가짐.(해당 내용에 대해서는 /mcjo 스킬에 작성되어 있음.)
+
+E:\George\Kimi-repo\project001 폴더 내에 모든 산출물을 저장한다.
 
 
 # ============================================
