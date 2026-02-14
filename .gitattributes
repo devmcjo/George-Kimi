@@ -1,0 +1,49 @@
+# Git 인코딩 설정 - UTF-8 강제
+
+# Markdown 파일
+*.md text eol=crlf working-tree-encoding=UTF-8
+
+# 프로 파일 (mcjo.pro 등)
+*.pro text eol=crlf working-tree-encoding=UTF-8
+
+# 스킬 파일
+*.skill text eol=crlf working-tree-encoding=UTF-8
+SKILL.md text eol=crlf working-tree-encoding=UTF-8
+
+# 기본 텍스트 파일
+*.txt text eol=crlf working-tree-encoding=UTF-8
+
+# HTML 파일
+*.html text eol=crlf working-tree-encoding=UTF-8
+
+# JSON/YAML/XML
+*.json text eol=crlf working-tree-encoding=UTF-8
+*.yml text eol=crlf working-tree-encoding=UTF-8
+*.yaml text eol=crlf working-tree-encoding=UTF-8
+*.xml text eol=crlf working-tree-encoding=UTF-8
+
+# C# 소스코드
+*.cs text eol=crlf working-tree-encoding=UTF-8
+*.csproj text eol=crlf working-tree-encoding=UTF-8
+*.sln text eol=crlf working-tree-encoding=UTF-8
+
+# Python
+*.py text eol=crlf working-tree-encoding=UTF-8
+
+# Shell 스크립트
+*.sh text eol=lf working-tree-encoding=UTF-8
+*.ps1 text eol=crlf working-tree-encoding=UTF-8
+*.bat text eol=crlf working-tree-encoding=UTF-8
+*.cmd text eol=crlf working-tree-encoding=UTF-8
+
+# 바이너리 파일 (텍스트로 처리하지 않음)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.7z binary
+*.exe binary
+*.dll binary

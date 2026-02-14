@@ -1,4 +1,4 @@
-# Lessons Learned — George-Kimi 학습 기록
+﻿# Lessons Learned — George-Kimi 학습 기록
 
 > 이 파일은 George-Kimi가 작업 중 발견한 실수, 개선점, 새로운 기법을 기록합니다.
 > George-Claude로부터 22개 교훈을 계승했습니다.
