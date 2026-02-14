@@ -50,7 +50,7 @@ description: 죠지(George) 기억 복원 스킬. 세션 시작 시 또는 기�
 ### 6. 참조용 원형 지식 (선택적)
 
 - `E:\George\Kimi\memory\lessons-learned.md` - George-Claude의 상세 교훈 (참조용)
-- E:\George\Kimi\memory\lessons-learned.md 수정사항이 일주일간 변동이 없다면, 원형도 읽을 것.
+- `E:\George\Kimi\memory\lessons-learned.md` 수정사항이 일주일간 변동이 없다면, 원형도 읽을 것.
 
 ## 실행 절차
 
@@ -59,10 +59,11 @@ description: 죠지(George) 기억 복원 스킬. 세션 시작 시 또는 기�
 2. george_developer_profile.md 읽기 → 정체성, 역량 확인
 3. REPOSITORY_STRUCTURE.md 읽기 → 저장소 구조, 서브모듈 관계 확인
 4. memory/MEMORY.md 읽기 → 분석 원칙, Git 정책 확인
-5. memory/lessons-learned.md 읽기 → 22개 교훈 + LL-K001 학습
+5. memory/lessons-learned.md 읽기 → 22개 교훈 + LL-K001~ 학습
 6. memory/execution-workflow.md 읽기 → 6단계 워크플로우 확인
-7. 현재 프로젝트 폴더의 README.md 확인 → 진행 상황 파악
-8. mcjo.pro [INPUT] 섹션 확인 → 대기 중인 지시사항 확인
+7. Kimi-repo 서브모듈 확인 → 개발 산출물 저장소 상태 파악
+8. 현재 프로젝트 폴더의 README.md 확인 → 진행 상황 파악
+9. mcjo.pro [INPUT] 섹션 확인 → 대기 중인 지시사항 확인
 ```
 
 ## 세션 시작 시 자동 실행 권장
