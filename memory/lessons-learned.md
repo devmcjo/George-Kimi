@@ -27,7 +27,7 @@
 | LL-A014 | PCH 규칙 체계화                             | Create/Use/NotUsing 3가지 상태 명확히        |
 | LL-A015 | 계획서는 delta가 아닌 독립 문서로 최종화    | 반복 중엔 delta OK, 확정 시 재구성           |
 | LL-A016 | MIDL 스텁 역공학 기법                       | `_c.c`/`_s.c`/`.h`에서 IDL 복원              |
-| LL-A017 | -제거-                                      | - 제거-                                      |
+| LL-A017 | -제거-                                      | -제거-                                       |
 | LL-A018 | 보안 크리티컬 모듈에 "FINAL" 조기 선언 금지 | 5% 미만 신규 발견 시까지 반복                |
 
 ### George-Claude 교훈 (4건)
@@ -45,6 +45,28 @@
 
 > George가 새로 발견한 교훈을 여기에 기록합니다.
 > 코드: LL-K001부터 시작
+
+### LL-K001: Git 정책 - 커밋은 자율, 푸시는 mcJo 전용 (George-Kimi, 2026-02-12)
+
+**사건**: George 초기 설정 완료 후 GitHub push를 자율적으로 수행함. mcJo가 "작업 완료 후 커밋은 스스로 진행하고, 푸시만 하지 말라"고 정정 지시.
+
+**교훈**:
+| 작업 | 권한 | 비고 |
+|------|------|------|
+| `git add` | ✅ 자율 | 작업 완료 시 스스로 stage |
+| `git commit` | ✅ 자율 | 작업 단위로 스스로 커밋 (`[George]` prefix 필수) |
+| `git push` | ❌ 금지 | mcJo가 직접 수행. George는 절대 실행하지 않음 |
+
+**적용법**:
+
+- 작업 완료 → `git add` → `git commit` (스스로 수행)
+- push는 필요 없음 (mcJo가 직접 관리)
+- `git status`로 커밋 대기 상태 확인 후 보고 (선택적)
+- 스크립트/자동화 도구에서 `push` 명령 발견 시 실행 중단하고 보고
+
+**관련 파일**: `KIMI.md`, `memory/MEMORY.md`
+
+---
 
 ### LL-K006: mcjo.pro 업데이트 시 기존 HISTORY 보존 필수
 
@@ -78,26 +100,6 @@ Set-Content "mcjo.pro" $updated
 2. **Set-Content 주의** - 파일 전체를 덮어씀
 3. **업데이트 전 항상 백업 확인** - `git show HEAD:project004/mcjo.pro`
 4. **추가만 하고 기존 내용은 절대 삭제 금지**
-
-### LL-K001: Git 정책 - 커밋은 자율, 푸시는 mcJo 전용 (George-Kimi, 2026-02-12)
-
-**사건**: George 초기 설정 완료 후 GitHub push를 자율적으로 수행함. mcJo가 "작업 완료 후 커밋은 스스로 진행하고, 푸시만 하지 말라"고 정정 지시.
-
-**교훈**:
-| 작업 | 권한 | 비고 |
-|------|------|------|
-| `git add` | ✅ 자율 | 작업 완료 시 스스로 stage |
-| `git commit` | ✅ 자율 | 작업 단위로 스스로 커밋 (`[George]` prefix 필수) |
-| `git push` | ❌ 금지 | mcJo가 직접 수행. George는 절대 실행하지 않음 |
-
-**적용법**:
-
-- 작업 완료 → `git add` → `git commit` (스스로 수행)
-- push는 필요 없음 (mcJo가 직접 관리)
-- `git status`로 커밋 대기 상태 확인 후 보고 (선택적)
-- 스크립트/자동화 도구에서 `push` 명령 발견 시 실행 중단하고 보고
-
-**관련 파일**: `KIMI.md`, `memory/MEMORY.md`
 
 ---
 

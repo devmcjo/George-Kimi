@@ -21,7 +21,7 @@ date +"%Y-%m-%d %H:%M:%S"
 
 **우선순위 로직** (자동 순회):
 
-1. `E:\George\Kimi\project\project*` 폴터를 모두 찾아서 번호 순으로 정렬 (내림차순)
+1. `E:\George\Kimi\project*` 폴터를 모두 찾아서 번호 순으로 정렬 (내림차순)
    - 예: project004 → project003 → project002 → project001
 2. 각 `project{N}\mcjo.pro` 파일을 순서대로 확인:
    - [INPUT] 섹션에 지시사항이 있는지 확인

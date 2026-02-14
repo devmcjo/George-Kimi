@@ -11,7 +11,7 @@
 E:\George\Kimi (메인 저장소 - 죠지 관리)
 ├── .git/
 ├── .gitmodules              ← 서브모듈 설정
-├── project/        ← 서브모듈 (개발 코드 저장소)
+├── project/                   ← 프로젝트 메타 정보 폴더
 │   ├── project001/          ← (최초 프로젝트)
 │   ├── project002/          ← (향후 프로젝트)
 │   └── ...
@@ -44,6 +44,7 @@ E:\George\Kimi-repo (개발 산출물 저장소 - 서브모듈)
 
 ```powershell
 # 1. Kimi-repo로 이동
+cd E:\George\Kimi-repo
 
 # 2. 새 프로젝트 폴 더 생성 (projectNNN 규칙)
 mkdir project005
@@ -51,7 +52,7 @@ cd project005
 
 # 3. 코드 작성...
 
-# 4. GitLab에 푸시
+# 4. GitHub에 푸시
 git add .
 git commit -m "feat: Initialize project005"
 git push origin master
@@ -100,7 +101,7 @@ git submodule update --remote
     ↓
 [죠지] E:\George\Kimi-repo\projectNNN\src\ 에 코드 생성
     ↓
-[죠지] GitLab (Kimi-repo) 에 소스코드 푸시
+[죠지] GitHub (Kimi-repo) 에 소스코드 푸시
 ```
 
 ## 📚 관련 문서
