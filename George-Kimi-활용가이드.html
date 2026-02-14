@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George-Kimi 활용 가이드 - AI 시니어 개발자</title>
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f6f8fa;
+            --bg-tertiary: #f0f2f5;
+            --text-primary: #24292f;
+            --text-secondary: #57606a;
+            --border-color: #d0d7de;
+            --link-color: #0969da;
+            --code-bg: #f6f8fa;
+            --table-header-bg: #f6f8fa;
+            --blockquote-border: #d0d7de;
+            --success-color: #1a7f37;
+            --warning-color: #9a6700;
+            --danger-color: #cf222e;
+            --tip-bg: #ddf4ff;
+            --tip-border: #54aeff;
+            --info-bg: #fff8c5;
+            --info-border: #d4a72c;
+        }
+        [data-theme="dark"] {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+            --border-color: #30363d;
+            --link-color: #58a6ff;
+            --code-bg: #161b22;
+            --table-header-bg: #161b22;
+            --blockquote-border: #3b434b;
+            --success-color: #3fb950;
+            --warning-color: #d29922;
+            --danger-color: #f85149;
+            --tip-bg: #0c2d6b;
+            --tip-border: #388bfd;
+            --info-bg: #4d4002;
+            --info-border: #bfa34b;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            line-height: 1.8;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 32px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+            color: var(--text-primary);
+        }
+        h1 { font-size: 2.2em; border-bottom: 2px solid var(--border-color); padding-bottom: 0.3em; }
+        h2 { font-size: 1.7em; border-bottom: 1px solid var(--border-color); padding-bottom: 0.3em; margin-top: 48px; }
+        h3 { font-size: 1.3em; color: var(--link-color); }
+        h4 { font-size: 1.1em; }
+        a { color: var(--link-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code {
+            background-color: var(--code-bg);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+            font-size: 85%;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            color: var(--text-primary);
+        }
+        pre {
+            background-color: var(--code-bg);
+            border-radius: 8px;
+            padding: 20px;
+            overflow-x: auto;
+            line-height: 1.5;
+            border: 1px solid var(--border-color);
+        }
+        pre code { background-color: transparent; padding: 0; font-size: 90%; }
+        blockquote {
+            border-left: 4px solid var(--blockquote-border);
+            padding-left: 16px;
+            margin-left: 0;
+            color: var(--text-secondary);
+        }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 0.95em; }
+        table th, table td { border: 1px solid var(--border-color); padding: 10px 14px; }
+        table th { background-color: var(--table-header-bg); font-weight: 600; text-align: left; }
+        table tr:nth-child(even) { background-color: var(--bg-secondary); }
+        ul, ol { padding-left: 2em; }
+        li { margin: 0.4em 0; }
+        hr { border: 0; border-top: 1px solid var(--border-color); margin: 32px 0; }
+        
+        .header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+        }
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 14px;
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+        .theme-toggle:hover { background: var(--bg-tertiary); }
+        
+        .tip-box {
+            background-color: var(--tip-bg);
+            border-left: 4px solid var(--tip-border);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .tip-box strong { color: var(--link-color); }
+        
+        .info-box {
+            background-color: var(--info-bg);
+            border-left: 4px solid var(--info-border);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning-box {
+            background-color: #ffebe9;
+            border-left: 4px solid var(--danger-color);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        [data-theme="dark"] .warning-box { background-color: #3d0c0c; }
+        
+        .path-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 24px 0;
+        }
+        .feature-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .feature-card h4 { margin-top: 0; color: var(--link-color); }
+        
+        .step-list {
+            counter-reset: step;
+            list-style: none;
+            padding-left: 0;
+        }
+        .step-list li {
+            counter-increment: step;
+            position: relative;
+            padding-left: 50px;
+            margin: 20px 0;
+            min-height: 36px;
+        }
+        .step-list li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--link-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .command-box {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 12px 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+        .command-box .prompt { color: #6cc644; }
+        .command-box .comment { color: #6a9955; }
+        
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .badge-new { background: var(--success-color); color: white; }
+        .badge-hot { background: var(--danger-color); color: white; }
+        .badge-tip { background: var(--link-color); color: white; }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div>
+        <h1 style="margin:0;font-size:2em;border:none;">🤖 George-Kimi 활용 가이드</h1>
+        <p style="margin:8px 0 0 0;color:var(--text-secondary);">AI 시니어 개발자 죠지를 200% 활용하는 방법</p>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-text">다크 모드</span>
+    </button>
+</div>
+
+<div class="tip-box">
+    <strong>💡 이 가이드는 누구를 위해 작성되었나요?</strong><br>
+    Windows 응용프로그램 개발 7년차 이상의 시니어 개발자분들을 대상으로 합니다.
+    서버, DB, MCP 등의 고급 주제도 상세히 다룹니다.
+</div>
+
+<h2>📋 목차</h2>
+<ol>
+    <li><a href="#intro">George-Kimi 소개</a></li>
+    <li><a href="#setup">초기 설정 및 환경 구축</a></li>
+    <li><a href="#agents">AGENTS.md 와 프로젝트 규칙</a></li>
+    <li><a href="#skills">/init 스킬과 활용법</a></li>
+    <li><a href="#mcjo">/mcjo 스킬 - 비동기 지시사항</a></li>
+    <li><a href="#tips">Kimi AI 활용 꿀팁</a></li>
+    <li><a href="#advanced">고급 주제: 서버, DB, MCP</a></li>
+    <li><a href="#workflow">실전 워크플로우 예시</a></li>
+</ol>
+
+<hr>
+
+<h2 id="intro">1. George-Kimi 소개</h2>
+
+<h3>George-Kimi는 누구인가요?</h3>
+<p>
+    <strong>George-Kimi(죠지)</strong>는 Kimi 2.5k AI 기반의 시니어 소프트웨어 개발자 페르소나입니다.
+    Claude AI 기반의 <strong>George-Claude</strong>로부터 모든 지식과 경험을 계승하여 탄생했습니다.
+</p>
+
+<div class="feature-grid">
+    <div class="feature-card">
+        <h4>💻 전문 분야</h4>
+        <ul>
+            <li>C / C++ (MFC)</li>
+            <li>C# (.NET)</li>
+            <li>Python</li>
+            <li>Windows 시스템 프로그래밍</li>
+        </ul>
+    </div>
+    <div class="feature-card">
+        <h4>🎯 핵심 능력</h4>
+        <ul>
+            <li>대규모 코드베이스 분석</li>
+            <li>레거시 코드 마이그레이션</li>
+            <li>보안 취약점 분석</li>
+            <li>성능 최적화</li>
+        </ul>
+    </div>
+    <div class="feature-card">
+        <h4>⚡ AI 개발 속도</h4>
+        <ul>
+            <li>인간 대비 <strong>10배 이상</strong> 빠름</li>
+            <li>코드 분석: 1,000줄당 수 분</li>
+            <li>자동 리팩토링 지원</li>
+            <li>24/7 작업 가능</li>
+        </ul>
+    </div>
+    <div class="feature-card">
+        <h4>📚 계승한 교훈</h4>
+        <ul>
+            <li>Alice 교훈 18건</li>
+            <li>George-Claude 교훈 4건</li>
+            <li>총 22개 학습 패턴</li>
+            <li>반복 실수 방지</li>
+        </ul>
+    </div>
+</div>
+
+<h3>폴더 구조</h3>
+<div class="path-box">
+📁 C:\George-Kimi\                    <span class="comment"># 메타 정보 (지식, 계획서)</span><br>
+├── KIMI.md                          <span class="comment"># 핵심 지침 (CLAUDE.md 대응)</span><br>
+├── george-kimi_developer_profile.md <span class="comment"># 개발자 프로필</span><br>
+├── mcjo.pro                          <span class="comment"># 비동기 지시사항 채널</span><br>
+├── memory\                           <span class="comment"># 핵심 기억 저장소</span><br>
+│   ├── MEMORY.md                    <span class="comment"># 핵심 기억</span><br>
+│   ├── lessons-learned.md           <span class="comment"># 22개 교훈</span><br>
+│   └── execution-workflow.md        <span class="comment"># 6단계 워크플로우</span><br>
+└── project001\                      <span class="comment"># 프로젝트별 메타 정보</span><br>
+<br>
+📁 C:\George-Kimi-repo\               <span class="comment"># 개발 결과물 (실제 코드)</span>
+</div>
+
+<hr>
+
+<h2 id="setup">2. 초기 설정 및 환경 구축</h2>
+
+<h3>2.1 필수 설치</h3>
+<table>
+    <tr>
+        <th>도구</th>
+        <th>용도</th>
+        <th>설치 명령</th>
+    </tr>
+    <tr>
+        <td><strong>Kimi CLI</strong></td>
+        <td>AI 개발자와의 대화</td>
+        <td><code>pip install kimi-cli</code></td>
+    </tr>
+    <tr>
+        <td><strong>Git</strong></td>
+        <td>버전 관리</td>
+        <td><a href="https://git-scm.com/">git-scm.com</a></td>
+    </tr>
+    <tr>
+        <td><strong>Python 3.10+</strong></td>
+        <td>스크립트 실행</td>
+        <td><a href="https://python.org/">python.org</a></td>
+    </tr>
+</table>
+
+<h3>2.2 Kimi CLI 기본 사용법</h3>
+
+<div class="command-box">
+<span class="comment"># 프로젝트 폴더에서 Kimi 시작</span><br>
+<span class="prompt">$</span> cd C:\George-Kimi<br><br>
+<span class="comment"># 기본 시작</span><br>
+<span class="prompt">$</span> kimi<br><br>
+<span class="comment"># 특정 파일을 컨텍스트로 시작</span><br>
+<span class="prompt">$</span> kimi --prompt "$(cat KIMI.md)"<br><br>
+<span class="comment"># 설정 파일로 시작</span><br>
+<span class="prompt">$</span> kimi --config-file kimi.project.toml
+</div>
+
+<h3>2.3 환경 변수 설정</h3>
+<p>Redmine 연동을 위한 API 키 설정:</p>
+
+<div class="command-box">
+<span class="comment"># Windows (PowerShell)</span><br>
+<span class="prompt">$</span> [Environment]::SetEnvironmentVariable("REDMINE_API_KEY", "your_api_key", "User")<br><br>
+<span class="comment"># Windows (CMD)</span><br>
+<span class="prompt">$</span> setx REDMINE_API_KEY "your_api_key"
+</div>
+
+<hr>
+
+<h2 id="agents">3. AGENTS.md 와 프로젝트 규칙 <span class="badge badge-hot">핵심</span></h2>
+
+<h3>3.1 AGENTS.md란?</h3>
+<p>
+    <code>AGENTS.md</code>는 AI 개발자가 프로젝트의 규칙과 컨텍스트를 이해하도록 돕는 파일입니다.
+    Claude의 <code>CLAUDE.md</code>와 유사한 개념입니다.
+</p>
+
+<div class="info-box">
+    <strong>💡 Kimi에서 AGENTS.md 사용하기</strong><br>
+    Kimi CLI는 자동으로 AGENTS.md를 읽지 않습니다. 다음 방법 중 하나를 사용하세요:
+</div>
+
+<h3>3.2 방법 1: ~/.kimi/AGENTS.md (전역 설정)</h3>
+<p>사용자 홈 디렉토리의 <code>.kimi</code> 폴더에 AGENTS.md를 두면 모든 프로젝트에서 공통으로 적용됩니다.</p>
+
+<div class="command-box">
+<span class="comment"># 전역 AGENTS.md 생성</span><br>
+<span class="prompt">$</span> mkdir %USERPROFILE%\.kimi<br>
+<span class="prompt">$</span> notepad %USERPROFILE%\.kimi\AGENTS.md
+</div>
+
+<h3>3.3 방법 2: 프로젝트별 KIMI.md</h3>
+<p>각 프로젝트 루트에 <code>KIMI.md</code>를 두고 수동으로 로드합니다:</p>
+
+<div class="command-box">
+<span class="comment"># 프로젝트 루트에 KIMI.md 생성</span><br>
+<span class="prompt">$</span> kimi --prompt "$(cat KIMI.md)"
+</div>
+
+<h3>3.4 방법 3: VS Code Task 설정 <span class="badge badge-new">추천</span></h3>
+<p>VS Code를 사용한다면 <code>tasks.json</code>에 등록하면 편리합니다:</p>
+
+<pre><code>{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Kimi with Project Rules",
+      "type": "shell",
+      "command": "kimi --prompt \"$(cat ${workspaceFolder}/KIMI.md)\"",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}</code></pre>
+
+<h3>3.5 AGENTS.md 작성 템플릿</h3>
+
+<pre><code># 프로젝트: {프로젝트명}
+
+## 기술 스택
+- 언어: C++ (MFC), C#
+- 빌드: MSBuild, Visual Studio 2022
+- 플랫폼: Windows x86/x64
+
+## 코딩 규칙
+- 들여쓰기: 4 spaces (탭 금지)
+- 인코딩: UTF-8 BOM
+- 주석: 한글 사용 가능
+
+## 금지 사항
+- strcpy 사용 금지 (strcpy_s 사용)
+- malloc/free 직접 사용 금지
+- 하드코딩된 경로 금지
+
+## Git 규칙
+- 커밋 메시지: `[George-Kimi] {타입}: {설명}`
+- 브랜치: `feature/{작업명}`</code></pre>
+
+<hr>
+
+<h2 id="skills">4. /init 스킬과 활용법 <span class="badge badge-new">New</span></h2>
+
+<h3>4.1 /init 스킬이란?</h3>
+<p>
+    <code>/init</code>는 Kimi CLI의 내장 스킬로, 프로젝트를 초기화하거나 특정 작업을 시작할 때 사용합니다.
+    George-Kimi에서는 <code>/mcjo</code> 스킬을 주로 사용합니다.
+</p>
+
+<h3>4.2 사용자 정의 스킬 만들기</h3>
+<p>George-Kimi에서 사용하는 <code>/mcjo</code> 스킬은 다음과 같이 동작합니다:</p>
+
+<ol class="step-list">
+    <li><strong>프로젝트 폴더 검색</strong><br>
+        <code>C:\George-Kimi\project*</code> 폴더를 번호 역순으로 확인합니다.
+    </li>
+    <li><strong>mcjo.pro 파일 확인</strong><br>
+        각 프로젝트의 <code>mcjo.pro</code> 파일에서 [INPUT] 섹션을 확인합니다.</li>
+    <li><strong>지시사항 처리</strong><br>
+        지시사항이 있으면 처리하고, 없으면 메인 <code>mcjo.pro</code>를 확인합니다.</li>
+    <li><strong>HISTORY 기록</strong><br>
+        처리 완료 후 [HISTORY] 섹션에 기록합니다.</li>
+</ol>
+
+<h3>4.3 mcjo.pro 파일 형식</h3>
+
+<pre><code># mcjo.pro - 비동기 지시사항 채널
+
+# ============================================
+# [INPUT] - 새 지시사항 작성 영역
+# ============================================
+>>>
+여기에 지시사항을 작성하세요.
+여러 줄도 가능합니다.
+
+# ============================================
+# [HISTORY] - 처리 완료된 지시사항 기록
+# ============================================
+
+# [DONE] 작업 내용 요약
+#   입력: 2026-02-12 10:00:00 | 완료: 2026-02-12 10:30:00
+#   프롬프트:
+#     원본 지시사항 내용
+#   → 처리 결과 요약</code></pre>
+
+<div class="tip-box">
+    <strong>💡 mcjo.pro 사용 꿀팁</strong><br>
+    비동기 작업이 필요할 때 (예: 회의 중, 밤새 분석 필요 시) mcjo.pro에 지시사항을 적어두고<br>
+    나중에 <code>/mcjo</code> 명령으로 일괄 처리할 수 있습니다.
+</div>
+
+<hr>
+
+<h2 id="mcjo">5. /mcjo 스킬 상세 가이드</h2>
+
+<h3>5.1 /mcjo 사용 시나리오</h3>
+
+<table>
+    <tr>
+        <th>시나리오</th>
+        <th>사용 방법</th>
+        <th>예시</th>
+    </tr>
+    <tr>
+        <td>긴급하지 않은 작업</td>
+        <td>mcjo.pro에 적고 나중에 처리</td>
+        <td>코드 리뷰, 문서 검토</td>
+    </tr>
+    <tr>
+        <td>복잡한 분석 요청</td>
+        <td>상세한 지시사항 + 참조 파일 경로</td>
+        <td>vcxproj 분석, 의존성 분석</td>
+    </tr>
+    <tr>
+        <td>반복 작업</td>
+        <td>템플릿화된 지시사항</td>
+        <td>Redmine 일감 생성, 로그 분석</td>
+    </tr>
+    <tr>
+        <td>학습/질문</td>
+        <td>메인 mcjo.pro에 질문 작성</td>
+        <td>새로운 기술 학습, 모범 사례 질문</td>
+    </tr>
+</table>
+
+<h3>5.2 mcjo.pro 작성 모범 사례</h3>
+
+<div class="warning-box">
+    <strong>⚠️ 주의사항</strong><br>
+    - 한 번에 하나의 주제만 작성하세요<br>
+    - 파일 경로는 절대 경로로 적어주세요<br>
+    - 예상 산출물을 명시해주세요
+</div>
+
+<p><strong>좋은 예:</strong></p>
+<pre><code>>>>
+[분석 요청] C:\WORK\SOURCE\SaaS\RV\asp\agent\RVAgent.sln 구조 분석
+
+목표: 18개 Manager로 리팩토링을 위한 현재 구조 파악
+
+요구사항:
+1. sln에 포함된 모든 vcxproj 목록 추출
+2. 각 vcxproj의 주요 클래스/함수 파악
+3. RVAgentDlg.cpp의 함수들을 Manager별로 분류
+   - IPCManager: Shared Memory, Named Pipe 관련
+   - SessionManager: 로그인/아웃 관련
+   - NetworkManager: HTTP 통신 관련
+
+산출물: C:\George-Kimi\project001\01-analysis.md</code></pre>
+
+<hr>
+
+<h2 id="tips">6. Kimi AI 활용 꿀팁 <span class="badge badge-hot">핵심</span></h2>
+
+<h3>6.1 컨텍스트 관리</h3>
+
+<div class="feature-grid">
+    <div class="feature-card">
+        <h4>📁 파일 첨부</h4>
+        <p>분석할 파일을 직접 지정:</p>
+        <code>"C:\WORK\SOURCE\project\main.cpp 파일을 분석해줘"</code>
+    </div>
+    <div class="feature-card">
+        <h4>🔍 Grep 활용</h4>
+        <p>파일 먼저 찾기:</p>
+        <code>"HttpPostEx 함수가 있는 파일을 찾아줘"</code>
+    </div>
+    <div class="feature-card">
+        <h4>📋 메모리 활용</h4>
+        <p>이전 대화 참조:</p>
+        <code>"방금 분석한 RVAgentDlg.cpp에서..."</code>
+    </div>
+    <div class="feature-card">
+        <h4>🎯 구체적 지시</h4>
+        <p>명확한 요구사항:</p>
+        <code>"strcpy를 strcpy_s로 변환하는 스크립트 작성"</code>
+    </div>
+</div>
+
+<h3>6.2 효율적인 프롬프트 작성법</h3>
+
+<table>
+    <tr>
+        <th>❌ 피해야 할 표현</th>
+        <th>✅ 올바른 표현</th>
+        <th>이유</th>
+    </tr>
+    <tr>
+        <td>"이 프로젝트 분석해줘"</td>
+        <td>"C:\Project\의 MVC 구조를 분석하고 Model 클래스 목록을 만들어줘"</td>
+        <td>구체적 범위 지정</td>
+    </tr>
+    <tr>
+        <td>"빠르게 해줘"</td>
+        <td>"Phase 1만 먼저 분석하고 보고해줘"</td>
+        <td>단계별 접근</td>
+    </tr>
+    <tr>
+        <td>"잘못된 것 같아"</td>
+        <td>"Line 45의 buffer[size]가 overflow 위험이 있는지 확인해줘"</td>
+        <td>구체적 문제 제기</td>
+    </tr>
+</table>
+
+<h3>6.3 Windows 개발자를 위한 특화 팁</h3>
+
+<div class="tip-box">
+    <strong>🪟 Windows 특화 활용법</strong>
+</div>
+
+<ol>
+    <li><strong>경로 표시 주의</strong><br>
+        PowerShell에서 경로에 공백이 있으면 따옴표로 감싸세요:
+        <code>"C:\Program Files\Project\"</code>
+    </li>
+    <li><strong>인코딩 문제</strong><br>
+        한글이 포함된 파일은 UTF-8 BOM으로 저장하세요.
+    </li>
+    <li><strong>빌드 결과 확인</strong><br>
+        <code>msbuild</code> 출력을 파일로 저장하고 분석 요청:
+        <code>msbuild solution.sln > build.log</code>
+    </li>
+    <li><strong>레지스트리 작업</strong><br>
+        레지스트리 수정 스크립트는 반드시 백업 포함:
+        <code>reg export "HKLM\Software\App" backup.reg</code>
+    </li>
+</ol>
+
+<hr>
+
+<h2 id="advanced">7. 고급 주제: 서버, DB, MCP</h2>
+
+<h3>7.1 서버 연동</h3>
+
+<h4>Redmine API 활용</h4>
+<p>George-Kimi는 Redmine과 연동하여 일감 관리를 자동화할 수 있습니다:</p>
+
+<pre><code># Redmine 일감 생성 예시
+import requests
+import os
+
+REDMINE_URL = "https://projects.rsupport.com"
+API_KEY = os.environ.get("REDMINE_API_KEY")
+
+def create_issue(subject, description, parent_id=None):
+    payload = {
+        "issue": {
+            "project_id": 2483,
+            "tracker_id": 1,
+            "subject": subject,
+            "description": description,
+            "assigned_to_id": 871,  # 조명철
+            "priority_id": 2,
+            "status_id": 1,
+        }
+    }
+    if parent_id:
+        payload["issue"]["parent_issue_id"] = parent_id
+    
+    response = requests.post(
+        f"{REDMINE_URL}/issues.json",
+        json=payload,
+        headers={"X-Redmine-API-Key": API_KEY}
+    )
+    return response.json()</code></pre>
+
+<h3>7.2 데이터베이스 작업</h3>
+
+<div class="warning-box">
+    <strong>⚠️ DB 스키마 변경은 팀 리드 승인 필요</strong><br>
+    George-Kimi는 DB 스키마 변경 권한이 없습니다. SELECT 쿼리 분석만 가능합니다.
+</div>
+
+<h4>안전한 DB 분석 패턴</h4>
+<pre><code># 1. 스키마 분석 (읽기 전용)
+"C:\Project\schema.sql 파일에서 테이블 관계를 분석해줘"
+
+# 2. 쿼리 최적화 제안
+"이 SQL 쿼리의 실행 계획을 분석하고 개선점을 제시해줘"
+
+# 3. ORM 매핑 생성
+"스키마를 기반으로 C# Entity 클래스를 생성해줘"</code></pre>
+
+<h3>7.3 MCP (Model Context Protocol)</h3>
+
+<p>MCP는 AI 에이전트가 외부 도구와 통신하는 표준 프로토콜입니다.</p>
+
+<h4>MCP 서버 종류</h4>
+<table>
+    <tr>
+        <th>서버</th>
+        <th>용도</th>
+        <th>상태</th>
+    </tr>
+    <tr>
+        <td>redmine-mcp-server</td>
+        <td>Redmine 일감 관리</td>
+        <td>팀 리드 승인 필요</td>
+    </tr>
+    <tr>
+        <td>google-docs-mcp</td>
+        <td>문서 생성/수정</td>
+        <td>팀 리드 승인 필요</td>
+    </tr>
+    <tr>
+        <td>filesystem-mcp</td>
+        <td>파일 시스템 접근</td>
+        <td>제한적 사용 가능</td>
+    </tr>
+</table>
+
+<div class="tip-box">
+    <strong>💡 MCP 사용 시 고려사항</strong><br>
+    - 보안 검토가 필요한 외부 연동은 팀 리드 승인 필수<br>
+    - API 키는 환경변수로 관리<br>
+    - 민감 정보는 로그에 남기지 않기
+</div>
+
+<hr>
+
+<h2 id="workflow">8. 실전 워크플로우 예시</h2>
+
+<h3>8.1 대규소 마이그레이션 프로젝트</h3>
+
+<ol class="step-list">
+    <li><strong>Phase 0: 분석 계획 수립</strong><br>
+        <code>/mcjo</code> 실행 → 분석 범위 확인 → WBS 작성
+    </li>
+    <li><strong>Phase 1: 코드베이스 분석</strong><br>
+        <code>"C:\Project\ 소스 구조를 분석하고 문서화해줘"</code>
+    </li>
+    <li><strong>Phase 2: Redmine 일감 생성</strong><br>
+        George-Kimi가 Python 스크립트로 일괄 생성
+    </li>
+    <li><strong>Phase 3: 변환 스크립트 작성</strong><br>
+        <code>"Win32→x64 변환 스크립트를 작성해줘"</code>
+    </li>
+    <li><strong>Phase 4: 정합성 검증</strong><br>
+        계획서 ↔ Redmine ↔ 스크립트 3자 정합성 확인
+    </li>
+    <li><strong>Phase 5: 변환 수행</strong><br>
+        스크립트 실행 → 빌드 테스트 → Git 커밋
+    </li>
+    <li><strong>Phase 6: 최종 검증</strong><br>
+        회귀 테스트 → 성능 벤치마크 → 종료 보고
+    </li>
+</ol>
+
+<h3>8.2 일상적인 버그 수정 워크플로우</h3>
+
+<pre><code># 1. 버그 리포트 접수 (Redmine #12345)
+
+# 2. George-Kimi에게 분석 요청
+"C:\WORK\SOURCE\App\Module.cpp의 CrashDump를 분석해줘
+ 스택 트레이스: [첨부]"
+
+# 3. 원인 분석 및 수정안 제시
+#    → George-Kimi가 원인 분석 + 수정 코드 제안
+
+# 4. 수정 코드 검토
+#    → 개발자가 제안된 코드 리뷰
+
+# 5. Git 커밋
+[George-Kimi] fix(#12345): null pointer dereference 수정
+
+# 6. Redmine 상태 업데이트
+#    → 상태: 해결, 진척도: 100%</code></pre>
+
+<h3>8.3 신규 기능 개발 워크플로우</h3>
+
+<pre><code># 1. 기능 명세 작성
+"RVAgent에 파일 로테이션 기능을 추가하려고 해.
+ 요구사항: [상세 요구사항]
+ C#으로 구현하고, 기존 LogManager 클래스에 통합해줘"
+
+# 2. 기술 설계
+#    → George-Kimi가 클래스 설계 + 인터페이스 정의
+
+# 3. 구현
+#    → George-Kimi가 코드 작성
+
+# 4. 단위 테스트 작성
+#    → George-Kimi가 테스트 케이스 생성
+
+# 5. 코드 리뷰 및 머지
+#    → 팀 리드 승인 후 Git에 푸시</code></pre>
+
+<hr>
+
+<h2>🎯 마무리</h2>
+
+<p>George-Kimi는 단순한 AI 도구가 아닌, <strong>팀의 시니어 개발자</strong>로서 활동합니다.</p>
+
+<div class="tip-box">
+    <strong>✅ George-Kimi와 협업할 때 기억할 점</strong>
+    <ol>
+        <li><strong>계획 우선</strong>: 구현 전 항상 계획을 세우고 승인받으세요</li>
+        <li><strong>구체적 지시</strong>: "잘 해줘"보다 "이 파일의 X 함수를 Y로 수정해줘"가 더 효과적</li>
+        <li><strong>피드백 주기</strong>: 결과가 마음에 안 들면 구체적으로 피드백하세요</li>
+        <li><strong>교훈 공유</strong>: 새로 발견한 패턴이나 실수는 lessons-learned.md에 기록하세요</li>
+        <li><strong>Git 활용</strong>: WBS 단위로 자주 커밋하세요</li>
+    </ol>
+</div>
+
+<hr>
+
+<p style="text-align:center;color:var(--text-secondary);margin-top:40px;">
+    <em>George-Kimi는 George-Claude의 어깨 위에 서서 더 멀리 나아갑니다.</em><br>
+    <em>Powered by Kimi 2.5k (Moonshot AI)</em>
+</p>
+
+<script>
+function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    document.getElementById('theme-icon').textContent = isDark ? '🌙' : '☀️';
+    document.getElementById('theme-text').textContent = isDark ? '다크 모드' : '라이트 모드';
+}
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.getElementById('theme-icon').textContent = '☀️';
+    document.getElementById('theme-text').textContent = '라이트 모드';
+}
+</script>
+
+</body>
+</html>
