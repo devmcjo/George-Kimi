@@ -1,8 +1,24 @@
 ﻿# George-Kimi Project
 
-AI 시니어 개발자 **죠지(George)**와의 협업을 위한 프로젝트입니다.
+AI 시니어 개발자 **죠지(George)**의 프로젝트 관리 및 메타 정보 저장소입니다.
 
-## 개요
+> **⚠️ 이 저장소는 메타 정보 저장소입니다.**  
+> 실제 개발 산출물(소스코드)은 [George-Kimi-repo](https://github.com/devmcjo/George-Kimi-repo)에서 확인하세요.
+
+---
+
+## 📋 저장소 역할
+
+이 저장소는 죠지(George)와의 협업을 관리하기 위한 **메타 정보 저장소**입니다.
+
+| 저장소 | 역할 | URL |
+|--------|------|-----|
+| **George-Kimi** (본 저장소) | 프로젝트 관리, 문서, 계획서, 설정 | https://github.com/devmcjo/George-Kimi |
+| **George-Kimi-repo** | 개발 산출물 (실제 소스코드) | https://github.com/devmcjo/George-Kimi-repo |
+
+---
+
+## 🤖 죠지(George) 소개
 
 죠지는 Kimi AI 기반의 시니어 소프트웨어 개발자 페르소나로, 조명철(mcJo)의 지시 하에 독립적으로 개발 업무를 수행합니다.
 
@@ -14,55 +30,90 @@ AI 시니어 개발자 **죠지(George)**와의 협업을 위한 프로젝트입
 
 ### 개발 원칙
 
-- 보안 최우선 (Secure by Design)
-- 성능 최적화 (하드웨어 자원 최소화)
-- 확장 가능한 아키텍처
-- 자기 문서화 코드
-- **AI 작업 속도**: 인간 개발자의 10배 이상
+- 🔒 보안 최우선 (Secure by Design)
+- ⚡ 성능 최적화 (하드웨어 자원 최소화)
+- 🏗️ 확장 가능한 아키텍처
+- 📋 자기 문서화 코드
 
-## 프로젝트 구조
+---
+
+## 📁 저장소 구조
 
 ```
 Kimi/
-├── README.md                      # 프로젝트 소개
+├── README.md                      # 프로젝트 소개 (본 파일)
 ├── KIMI.md                        # 🔑 죠지의 핵심 지침
 ├── george_developer_profile.md    # 죠지 개발자 프로필
 ├── mcjo.pro                       # 🔔 비동기 지시사항 채널
-├── memory/                        # 마스터 메모리
+├── AGENTS.md                      # 🤖 AI 코딩 에이전트 가이드
+├── REPOSITORY_STRUCTURE.md        # 저장소 구조 문서
+├── memory/                        # 죠지 기억 저장소
 │   ├── MEMORY.md                  # 핵심 기억
-│   ├── lessons-learned.md         # 교훈 저장소
+│   ├── lessons-learned.md         # 교훈 저장소 (22+ 건)
 │   └── execution-workflow.md      # 6단계 실행 워크플로우
-├── project001/                    # 프로젝트별 메타 정보
-    └── *.md                       # 분석 문서, 계획서
+├── project/                       # 프로젝트별 메타 정보
+│   ├── project001/                # 프로젝트 1 메타 정보
+│   ├── project002/                # 프로젝트 2 메타 정보
+│   └── project003/                # 프로젝트 3 메타 정보
+└── .kimi/skills/                  # 죠지 스킬 저장소
+    ├── mcjo/                      # /mcjo 스킬
+    └── readprofile/               # /readprofile 스킬
 ```
 
-## George-Claude로부터의 계승
+---
 
-George는 George-Claude의 다음 시스템과 교훈을 계승했습니다:
+## 🚀 주요 기능
 
-### 계승한 시스템
+### 1. 비동기 지시사항 채널 (mcjo.pro)
 
-1. **이중 저장소 구조** - 메타 정보(george-kimi.git) vs 개발 결과물(george-kimi-repo.git) 분리
-2. **권한 제어 시스템** - 읽기/쓰기, 읽기 전용, 접근 금지 3단계 구분
-3. **작업 프로세스** - 계획 우선 → WBS 단위 실행
-4. **비동기 통신 채널** - mcjo.pro (팀 리드 지시사항 전달)
+팀 리드는 `mcjo.pro` 파일에 지시사항을 작성하면, 죠지는 `/mcjo` 스킬로 자동으로 처리합니다.
 
-### 계승한 교훈 (총 22건)
-
-- **Alice로부터 계승 (George-Claude 경유)**: 18건 (LL-A001~LL-A018)
-- **George-Claude 고유**: 4건 (LL-G001~LL-G004)
-
-## 워크플로
-
-### 작업 프로세스
-
-```
-[태스크 할당] → [죠지 계획 수립] → [팀 리드 승인] → [WBS 단위 실행] → [Git 커밋/푸시]
+```bash
+# Kimi CLI에서 실행
+/mcjo
 ```
 
-### 비동기 통신 채널 (mcjo.pro)
+### 2. 기억 복원 시스템 (readprofile)
 
-팀 리드는 `mcjo.pro` 파일에 지시사항을 작성하고, 죠지는 `/mcjo` 스킬로 처리합니다.
+새로운 세션 시작 시 죠지의 모든 기억을 복원합니다.
+
+```bash
+# Kimi CLI에서 실행
+/readprofile
+```
+
+### 3. 이중 저장소 구조
+
+- **메타 저장소** (본 저장소): 문서, 계획서, 설정 관리
+- **개발 저장소** ([George-Kimi-repo](https://github.com/devmcjo/George-Kimi-repo)): 실제 소스코드 관리
+
+---
+
+## 📚 핵심 문서
+
+| 문서 | 설명 |
+|------|------|
+| [KIMI.md](./KIMI.md) | 죠지의 핵심 지침, 권한, 개발 원칙 |
+| [george_developer_profile.md](./george_developer_profile.md) | 개발자 프로필, 역량, 업무 프로세스 |
+| [AGENTS.md](./AGENTS.md) | AI 코딩 에이전트를 위한 종합 가이드 |
+| [memory/lessons-learned.md](./memory/lessons-learned.md) | 22개+ 교훈 저장소 |
+| [REPOSITORY_STRUCTURE.md](./REPOSITORY_STRUCTURE.md) | 저장소 구조 및 서브모듈 정보 |
+
+---
+
+## 🔄 작업 프로세스
+
+```
+[태스크 할당]
+    ↓
+[죠지 계획 수립] → WBS 작성
+    ↓
+[팀 리드 승인]
+    ↓
+[WBS 단위 실행]
+    ↓
+[Git 커밋] (push는 팀 리드가 수행)
+```
 
 ### Git 커밋 규칙
 
@@ -72,29 +123,36 @@ George는 George-Claude의 다음 시스템과 교훈을 계승했습니다:
 
 **타입**: feat, fix, refactor, style, test, docs, chore
 
-## 시작하기
+---
 
-1. `KIMI.md`에서 죠지의 핵심 지침 확인
-2. `george_developer_profile.md`에서 죠지의 역량과 원칙 확인
-3. `memory/MEMORY.md`에서 핵심 기억 확인
-4. `memory/lessons-learned.md`에서 22개 교훈 학습
-5. Kimi CLI 또는 Kimi Code에서 죠지와 협업 시작
+## 🌳 프로젝트 목록
 
-## 관련 저장소
-
-| 저장소                   | 역할                               | URL                                         |
-| ------------------------ | ---------------------------------- | ------------------------------------------- |
-| **george-kimi.git**      | 메타 정보 (지식, 계획서, 스크립트) | https://github.com/devmcjo/George-Kimi      |
-| **george-kimi-repo.git** | 개발 결과물 (실제 코드)            | https://github.com/devmcjo/George-Kimi-repo |
-
-## 환경 설정
-
-### 권한 구조
-
-- **읽기/쓰기**: `E:\George\Kimi\`, `E:\George\Kimi-repo\`
-- **읽기 전용**: 모든 디렉토리 읽기 허용
+| 프로젝트 | 이름 | 설명 | 개발 산출물 |
+|----------|------|------|-------------|
+| project001 | TestProject | 테스트용 프로젝트 | [Kimi-repo/project001](https://github.com/devmcjo/George-Kimi-repo/tree/main/project001) |
+| project002 | Engineering Calculator | 공학용 계산기 | [Kimi-repo/project002](https://github.com/devmcjo/George-Kimi-repo/tree/main/project002) |
+| project003 | WeatherApp | 날씨 정보 프로그램 | [Kimi-repo/project003](https://github.com/devmcjo/George-Kimi-repo/tree/main/project003) |
 
 ---
 
-_Powered by Kimi 2.5k (Moonshot AI)_
+## 🔗 관련 저장소
+
+```
+┌─────────────────────────────────────┐
+│      George-Kimi (메타 저장소)       │
+│  - 문서, 계획서, 설정, 교훈 등 관리   │
+│  - https://github.com/devmcjo/...   │
+└─────────────────┬───────────────────┘
+                  │ 서브모듈 연결
+                  ▼
+┌─────────────────────────────────────┐
+│    George-Kimi-repo (코드 저장소)    │
+│  - 실제 개발 산출물(소스코드) 관리    │
+│  - https://github.com/devmcjo/...   │
+└─────────────────────────────────────┘
+```
+
+---
+
+_Powered by Kimi 2.5k (Moonshot AI)_  
 _Standing on the shoulders of George-Claude 🤝_
