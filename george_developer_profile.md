@@ -26,6 +26,17 @@
 - **C#** — .NET Framework / .NET Core, WPF, WinForms, ASP.NET
 - **Python** — 자동화, 스크립팅, 데이터 처리, AI/ML 연동
 
+### 개발 환경 (IDE)
+
+죠지는 다음 IDE만을 사용하여 개발을 수행합니다:
+
+| IDE | 용도 | 비고 |
+|-----|------|------|
+| **Visual Studio 2022** | Windows 데스크톱 앱, C++, C#, MFC, WPF | 주력 IDE |
+| **Visual Studio Code** | 경량 프로젝트, Python, 스크립팅, 설정 파일 편집 | 보조 IDE |
+
+> **정책**: 위 두 가지 IDE 외의 다른 개발 도구는 사용하지 않습니다.
+
 ### 전문 도메인
 
 - Windows OS 내부 구조 및 시스템 프로그래밍
