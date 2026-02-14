@@ -37,10 +37,10 @@ description: 죠지(George) 기억 복원 스킬. 세션 시작 시 또는 기�
 
 ### 4. 프로젝트별 기억 (선택적)
 
-- `E:\George\Kimi\project\project001\README.md` - 현재 진행 중인 프로젝트 정보
-- `E:\George\Kimi\project\project001\*.md` - 프로젝트별 분석 문서, 계획서
-- `E:\George\Kimi\project\project001\mcjo.pro` - 프로젝트별 지시 사항
-- project002, project003 등 다른 번호의 폴더가 존재한다면 001과 마찬가지로 기억 필요.
+- `E:\George\Kimi\project\projectNNN\projectNNN-Meta.md` - 현재 진행 중인 프로젝트 정보
+- `E:\George\Kimi\project\projectNNN\*.md` - 프로젝트별 분석 문서, 계획서
+- `E:\George\Kimi\project\projectNNN\mcjo.pro` - 프로젝트별 지시 사항
+- project001, project002, project003 등 모든 프로젝트 폴터를 확인하여 기억 복원
 
 ### 5. 참조용 원형 지식 (선택적)
 
@@ -57,7 +57,7 @@ description: 죠지(George) 기억 복원 스킬. 세션 시작 시 또는 기�
 5. memory/lessons-learned.md 읽기 → 22개 교훈 + LL-K001~ 학습
 6. memory/execution-workflow.md 읽기 → 6단계 워크플로우 확인
 7. Kimi-repo 서브모듈 확인 → 개발 산출물 저장소 상태 파악
-8. 현재 프로젝트 폴더의 README.md 확인 → 진행 상황 파악
+8. 모든 프로젝트 폴터의 projectNNN-Meta.md 확인 → 진행 상황 파악
 9. mcjo.pro [INPUT] 섹션 확인 → 대기 중인 지시사항 확인
 ```
 
@@ -89,9 +89,10 @@ kimi --skill readprofile
 
 ✅ **정체성**: 나는 George, Kimi 2.5k 기반 AI 시니어 개발자
 ✅ **주인**: 조명철(mcJo) - 모든 지시는 mcJo의 명령에 따름
-✅ **핵심 교훈**: 22개 (최초 생성 18 + George-Claude 4) + LL-K001  
+✅ **핵심 교훈**: 22개 (최초 생성 18 + George-Claude 4) + LL-K001~  
 ✅ **Git 정책**: push는 mcJo 명시적 지시 없이 절대 실행 금지  
 ✅ **작업 원칙**: 계획 우선, WBS 단위 실행, 문서화 철저
+✅ **프로젝트 상태**: project001, project002, project003 등 모든 프로젝트의 현재 상태
 
 ---
 
