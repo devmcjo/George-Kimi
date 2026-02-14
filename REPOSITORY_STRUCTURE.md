@@ -1,100 +1,100 @@
-# George-Kimi 저장소 구조
+# George-Kimi ?�?�소 구조
 
-> 생성일: 2026-02-13
-> 목적: 죠지(George-Kimi) 관리 프로젝트와 개발 산출물 프로젝트 분리
-
----
-
-## 📁 전체 구조
-
-```
-C:\George-Kimi (메인 저장소 - 죠지 관리)
-├── .git/
-├── .gitmodules              ← 서브모듈 설정
-├── George-Kimi-repo/        ← 서브모듈 (개발 코드 저장소)
-│   ├── project004/          ← RVAgent C# Windows Service
-│   ├── project005/          ← (향후 프로젝트)
-│   └── ...
-├── .kimi/                   ← 죠지 설정
-├── memory/                  ← 죠지 기억 저장소
-├── Onboarding/              ← 온볼딩 자료
-└── ...
-
-C:\George-Kimi-repo (로컬 서브모듈 원본)
-├── .git/
-├── project004/              ← RVAgent 코드 (GitLab 동기화)
-└── ...
-```
+> ?�성?? 2026-02-13
+> 목적: 죠�?(George-Kimi) 관�??�로?�트?� 개발 ?�출�??�로?�트 분리
 
 ---
 
-## 🔗 서브모듈 정보
+## ?�� ?�체 구조
 
-| 항목 | 값 |
+```
+E:\George\Kimi (메인 ?�?�소 - 죠�? 관�?
+?��??� .git/
+?��??� .gitmodules              ???�브모듈 ?�정
+?��??� George-Kimi-repo/        ???�브모듈 (개발 코드 ?�?�소)
+??  ?��??� project004/          ??RVAgent C# Windows Service
+??  ?��??� project005/          ??(?�후 ?�로?�트)
+??  ?��??� ...
+?��??� .kimi/                   ??죠�? ?�정
+?��??� memory/                  ??죠�? 기억 ?�?�소
+?��??� Onboarding/              ???�볼???�료
+?��??� ...
+
+E:\George\Kimi-repo (로컬 ?�브모듈 ?�본)
+?��??� .git/
+?��??� project004/              ??RVAgent 코드 (GitLab ?�기??
+?��??� ...
+```
+
+---
+
+## ?�� ?�브모듈 ?�보
+
+| ??�� | �?|
 |------|-----|
-| **이름** | George-Kimi-repo |
+| **?�름** | George-Kimi-repo |
 | **GitLab URL** | https://gitlab.rsupport.com/mcjo/George-Kimi-repo |
-| **로컬 경로** | C:\George-Kimi\George-Kimi-repo |
+| **로컬 경로** | E:\George\Kimi\George-Kimi-repo |
 | **visibility** | Private |
 
 ---
 
-## 🚀 사용 방법
+## ?? ?�용 방법
 
-### 1. 새 프로젝트 시작
+### 1. ???�로?�트 ?�작
 
 ```powershell
-# 1. George-Kimi-repo로 이동
-cd C:\George-Kimi-repo
+# 1. George-Kimi-repo�??�동
+cd E:\George\Kimi-repo
 
-# 2. 새 프로젝트 폴 더 생성 (projectNNN 규칙)
+# 2. ???�로?�트 ?????�성 (projectNNN 규칙)
 mkdir project005
 cd project005
 
-# 3. 코드 작성...
+# 3. 코드 ?�성...
 
-# 4. GitLab에 푸시
+# 4. GitLab???�시
 git add .
 git commit -m "feat: Initialize project005"
 git push origin master
 ```
 
-### 2. 메인 저장소에서 서브모듈 업데이트
+### 2. 메인 ?�?�소?�서 ?�브모듈 ?�데?�트
 
 ```powershell
-# George-Kimi-repo 최신화
-cd C:\George-Kimi\George-Kimi-repo
+# George-Kimi-repo 최신??
+cd E:\George\Kimi\George-Kimi-repo
 git pull origin master
 
-# 또는 메인 저장소에서
-cd C:\George-Kimi
+# ?�는 메인 ?�?�소?�서
+cd E:\George\Kimi
 git submodule update --remote
 ```
 
-### 3. 다른 PC에서 죠지 환경 복제
+### 3. ?�른 PC?�서 죠�? ?�경 복제
 
 ```powershell
-# 1. 메인 저장소 클론
-git clone <George-Kimi-url> C:\George-Kimi
+# 1. 메인 ?�?�소 ?�론
+git clone <George-Kimi-url> E:\George\Kimi
 
-# 2. 서브모듈 초기화
-cd C:\George-Kimi
+# 2. ?�브모듈 초기??
+cd E:\George\Kimi
 git submodule update --init --recursive
 
-# 3. 완료 - 동일 환경 구성됨
+# 3. ?�료 - ?�일 ?�경 구성??
 ```
 
 ---
 
-## ⚙️ 서브모듈 설정 방법 (초기 설정 시)
+## ?�️ ?�브모듈 ?�정 방법 (초기 ?�정 ??
 
 ```powershell
-cd C:\George-Kimi
+cd E:\George\Kimi
 
-# 서브모듈 등록
+# ?�브모듈 ?�록
 git submodule add https://gitlab.rsupport.com/mcjo/George-Kimi-repo.git George-Kimi-repo
 
-# 초기화
+# 초기??
 git submodule update --init --recursive
 
 # 커밋
@@ -104,98 +104,98 @@ git commit -m "chore: Add George-Kimi-repo as submodule"
 
 ---
 
-## 📝 프로젝트 번호 규칙
+## ?�� ?�로?�트 번호 규칙
 
-| 프로젝트 번호 | 내용 | 경로 |
+| ?�로?�트 번호 | ?�용 | 경로 |
 |--------------|------|------|
-| project001 | (예약) | George-Kimi-repo/project001/ |
-| project002 | (예약) | George-Kimi-repo/project002/ |
-| project003 | (예약) | George-Kimi-repo/project003/ |
+| project001 | (?�약) | George-Kimi-repo/project001/ |
+| project002 | (?�약) | George-Kimi-repo/project002/ |
+| project003 | (?�약) | George-Kimi-repo/project003/ |
 | project004 | RVAgent C# Windows Service | George-Kimi-repo/project004/ |
-| project005+ | (향후 프로젝트) | George-Kimi-repo/projectNNN/ |
+| project005+ | (?�후 ?�로?�트) | George-Kimi-repo/projectNNN/ |
 
 ---
 
-## 🔄 관리 패턴 (George/George-repo 방식)
+## ?�� 관�??�턴 (George/George-repo 방식)
 
-이 저장소 구조는 `George/George-repo` 패턴을 따릅니다:
+???�?�소 구조??`George/George-repo` ?�턴???�릅?�다:
 
-| 저장소 | 역할 | 내용 | 예시 |
+| ?�?�소 | ??�� | ?�용 | ?�시 |
 |--------|------|------|------|
-| **George-Kimi** | 프로젝트 관리 | 문서, 지시사항, 설정 | `project004/mcjo.pro`, `.md` 파일들 |
-| **George-Kimi-repo** | 코드 산출물 | 실제 소스코드 | `project004/src/RVAgent/...` |
+| **George-Kimi** | ?�로?�트 관�?| 문서, 지?�사?? ?�정 | `project004/mcjo.pro`, `.md` ?�일??|
+| **George-Kimi-repo** | 코드 ?�출�?| ?�제 ?�스코드 | `project004/src/RVAgent/...` |
 
-### 동작 예시
+### ?�작 ?�시
 
 ```
-[사용자] /mcjo 프로젝트004 새 기능 추가해줘
-    ↓
-[죠지] C:\George-Kimi\project004\mcjo.pro 읽기 → 지시사항 처리
-    ↓
-[죠지] C:\George-Kimi\George-Kimi-repo\project004\src\ 에 코드 생성
-    ↓
-[죠지] GitLab (George-Kimi-repo) 에 소스코드 푸시
+[?�용?? /mcjo ?�로?�트004 ??기능 추�??�줘
+    ??
+[죠�?] E:\George\Kimi\project004\mcjo.pro ?�기 ??지?�사??처리
+    ??
+[죠�?] E:\George\Kimi\George-Kimi-repo\project004\src\ ??코드 ?�성
+    ??
+[죠�?] GitLab (George-Kimi-repo) ???�스코드 ?�시
 ```
 
-### 다른 PC에서 환경 복제
+### ?�른 PC?�서 ?�경 복제
 
 ```bash
-# 1. 메인 저장소 클론 (문서 + 설정)
-git clone https://gitlab.rsupport.com/mcjo/George-Kimi.git C:\George-Kimi
+# 1. 메인 ?�?�소 ?�론 (문서 + ?�정)
+git clone https://gitlab.rsupport.com/mcjo/George-Kimi.git E:\George\Kimi
 
-# 2. 서브모듈 초기화 (코드 산출물)
-cd C:\George-Kimi
+# 2. ?�브모듈 초기??(코드 ?�출�?
+cd E:\George\Kimi
 git submodule update --init --recursive
 
-# 완료! 동일한 죠지 환경 구성됨
+# ?�료! ?�일??죠�? ?�경 구성??
 ```
 
-## 📝 커밋 규칙 (모든 저장소 공통)
+## ?�� 커밋 규칙 (모든 ?�?�소 공통)
 
-### 적용 대상
-- `George-Kimi` (메인 저장소)
-- `George-Kimi-repo` (서브모듈 - 코드 저장소)
+### ?�용 ?�??
+- `George-Kimi` (메인 ?�?�소)
+- `George-Kimi-repo` (?�브모듈 - 코드 ?�?�소)
 
-### 커밋 메시지 형식
+### 커밋 메시지 ?�식
 ```
-[Prefix] 타입(#일감번호): 한글 설명 위주
+[Prefix] ?�??#?�감번호): ?��? ?�명 ?�주
 
-- 세부 내용 한글로 작성
-- 영어는 필요시 괄호 안에만 작성
+- ?��? ?�용 ?��?�??�성
+- ?�어???�요??괄호 ?�에�??�성
 ```
 
-### 예시
+### ?�시
 ```bash
-# 올바른 예시
-[George] feat(#262692): SessionManager 고급 기능 구현 - Day 4 완료
+# ?�바�??�시
+[George] feat(#262692): SessionManager 고급 기능 구현 - Day 4 ?�료
 
-- LoginAsync() - 사용자 로그인 및 세션 생성
-- LogoutAsync() - 로그아웃 및 세션 종료
-- GenerateAccessTokenAsync() - 액세스 토큰 생성
+- LoginAsync() - ?�용??로그??�??�션 ?�성
+- LogoutAsync() - 로그?�웃 �??�션 종료
+- GenerateAccessTokenAsync() - ?�세???�큰 ?�성
 
-# 잘못된 예시 (영어 위주)
+# ?�못???�시 (?�어 ?�주)
 [George] feat(#262692): Day 4 - SessionManager advanced features
 ```
 
-### 커밋 타입
-| 타입 | 설명 |
+### 커밋 ?�??
+| ?�??| ?�명 |
 |------|------|
-| `feat` | 새 기능 |
-| `fix` | 버그 수정 |
+| `feat` | ??기능 |
+| `fix` | 버그 ?�정 |
 | `docs` | 문서 |
-| `refactor` | 리팩토링 |
-| `chore` | 기타 |
+| `refactor` | 리팩?�링 |
+| `chore` | 기�? |
 
-## 🔒 보안 주의사항
+## ?�� 보안 주의?�항
 
-- **GitLab Personal Access Token**은 절대 저장소에 커밋하지 않음
-- 필요 시 환경변수로만 사용 후 즉시 삭제
-- Windows Credential Manager에 저장된 인증 정보 활용
+- **GitLab Personal Access Token**?� ?��? ?�?�소??커밋?��? ?�음
+- ?�요 ???�경변?�로�??�용 ??즉시 ??��
+- Windows Credential Manager???�?�된 ?�증 ?�보 ?�용
 
 ---
 
-## 📚 관련 문서
+## ?�� 관??문서
 
-- `KIMI.md` - 죠지 핵심 지식
-- `George-Kimi-활용가이드.html` - 상세 가이드
-- `.kimi/skills/` - 죠지 스킬 저장소
+- `KIMI.md` - 죠�? ?�심 지??
+- `George-Kimi-?�용가?�드.html` - ?�세 가?�드
+- `.kimi/skills/` - 죠�? ?�킬 ?�?�소

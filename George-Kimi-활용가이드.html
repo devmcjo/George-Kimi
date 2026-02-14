@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>George-Kimi 활용 가이드 - AI 시니어 개발자</title>
+    <title>George-Kimi ?�용 가?�드 - AI ?�니??개발??/title>
     <style>
         :root {
             --bg-primary: #ffffff;
@@ -226,140 +226,140 @@
 <body>
 <div class="header">
     <div>
-        <h1 style="margin:0;font-size:2em;border:none;">🤖 George-Kimi 활용 가이드</h1>
-        <p style="margin:8px 0 0 0;color:var(--text-secondary);">AI 시니어 개발자 죠지를 200% 활용하는 방법</p>
+        <h1 style="margin:0;font-size:2em;border:none;">?�� George-Kimi ?�용 가?�드</h1>
+        <p style="margin:8px 0 0 0;color:var(--text-secondary);">AI ?�니??개발??죠�?�?200% ?�용?�는 방법</p>
     </div>
     <button class="theme-toggle" onclick="toggleTheme()">
-        <span id="theme-icon">🌙</span>
-        <span id="theme-text">다크 모드</span>
+        <span id="theme-icon">?��</span>
+        <span id="theme-text">?�크 모드</span>
     </button>
 </div>
 
 <div class="tip-box">
-    <strong>💡 이 가이드는 누구를 위해 작성되었나요?</strong><br>
-    Windows 응용프로그램 개발 7년차 이상의 시니어 개발자분들을 대상으로 합니다.
-    서버, DB, MCP 등의 고급 주제도 상세히 다룹니다.
+    <strong>?�� ??가?�드???�구�??�해 ?�성?�었?�요?</strong><br>
+    Windows ?�용?�로그램 개발 7?�차 ?�상???�니??개발?�분?�을 ?�?�으�??�니??
+    ?�버, DB, MCP ?�의 고급 주제???�세???�룹?�다.
 </div>
 
-<h2>📋 목차</h2>
+<h2>?�� 목차</h2>
 <ol>
-    <li><a href="#intro">George-Kimi 소개</a></li>
-    <li><a href="#setup">초기 설정 및 환경 구축</a></li>
-    <li><a href="#agents">AGENTS.md 와 프로젝트 규칙</a></li>
-    <li><a href="#skills">/init 스킬과 활용법</a></li>
-    <li><a href="#mcjo">/mcjo 스킬 - 비동기 지시사항</a></li>
-    <li><a href="#tips">Kimi AI 활용 꿀팁</a></li>
-    <li><a href="#advanced">고급 주제: 서버, DB, MCP</a></li>
-    <li><a href="#workflow">실전 워크플로우 예시</a></li>
+    <li><a href="#intro">George-Kimi ?�개</a></li>
+    <li><a href="#setup">초기 ?�정 �??�경 구축</a></li>
+    <li><a href="#agents">AGENTS.md ?� ?�로?�트 규칙</a></li>
+    <li><a href="#skills">/init ?�킬�??�용�?/a></li>
+    <li><a href="#mcjo">/mcjo ?�킬 - 비동�?지?�사??/a></li>
+    <li><a href="#tips">Kimi AI ?�용 꿀??/a></li>
+    <li><a href="#advanced">고급 주제: ?�버, DB, MCP</a></li>
+    <li><a href="#workflow">?�전 ?�크?�로???�시</a></li>
 </ol>
 
 <hr>
 
-<h2 id="intro">1. George-Kimi 소개</h2>
+<h2 id="intro">1. George-Kimi ?�개</h2>
 
-<h3>George-Kimi는 누구인가요?</h3>
+<h3>George-Kimi???�구?��???</h3>
 <p>
-    <strong>George-Kimi(죠지)</strong>는 Kimi 2.5k AI 기반의 시니어 소프트웨어 개발자 페르소나입니다.
-    Claude AI 기반의 <strong>George-Claude</strong>로부터 모든 지식과 경험을 계승하여 탄생했습니다.
+    <strong>George-Kimi(죠�?)</strong>??Kimi 2.5k AI 기반???�니???�프?�웨??개발???�르?�나?�니??
+    Claude AI 기반??<strong>George-Claude</strong>로�???모든 지?�과 경험??계승?�여 ?�생?�습?�다.
 </p>
 
 <div class="feature-grid">
     <div class="feature-card">
-        <h4>💻 전문 분야</h4>
+        <h4>?�� ?�문 분야</h4>
         <ul>
             <li>C / C++ (MFC)</li>
             <li>C# (.NET)</li>
             <li>Python</li>
-            <li>Windows 시스템 프로그래밍</li>
+            <li>Windows ?�스???�로그래�?/li>
         </ul>
     </div>
     <div class="feature-card">
-        <h4>🎯 핵심 능력</h4>
+        <h4>?�� ?�심 ?�력</h4>
         <ul>
-            <li>대규모 코드베이스 분석</li>
-            <li>레거시 코드 마이그레이션</li>
-            <li>보안 취약점 분석</li>
-            <li>성능 최적화</li>
+            <li>?�규모 코드베이??분석</li>
+            <li>?�거??코드 마이그레?�션</li>
+            <li>보안 취약??분석</li>
+            <li>?�능 최적??/li>
         </ul>
     </div>
     <div class="feature-card">
-        <h4>⚡ AI 개발 속도</h4>
+        <h4>??AI 개발 ?�도</h4>
         <ul>
-            <li>인간 대비 <strong>10배 이상</strong> 빠름</li>
-            <li>코드 분석: 1,000줄당 수 분</li>
-            <li>자동 리팩토링 지원</li>
-            <li>24/7 작업 가능</li>
+            <li>?�간 ?��?<strong>10�??�상</strong> 빠름</li>
+            <li>코드 분석: 1,000줄당 ??�?/li>
+            <li>?�동 리팩?�링 지??/li>
+            <li>24/7 ?�업 가??/li>
         </ul>
     </div>
     <div class="feature-card">
-        <h4>📚 계승한 교훈</h4>
+        <h4>?�� 계승??교훈</h4>
         <ul>
-            <li>Alice 교훈 18건</li>
-            <li>George-Claude 교훈 4건</li>
-            <li>총 22개 학습 패턴</li>
-            <li>반복 실수 방지</li>
+            <li>Alice 교훈 18�?/li>
+            <li>George-Claude 교훈 4�?/li>
+            <li>�?22�??�습 ?�턴</li>
+            <li>반복 ?�수 방�?</li>
         </ul>
     </div>
 </div>
 
-<h3>폴더 구조</h3>
+<h3>?�더 구조</h3>
 <div class="path-box">
-📁 C:\George-Kimi\                    <span class="comment"># 메타 정보 (지식, 계획서)</span><br>
-├── KIMI.md                          <span class="comment"># 핵심 지침 (CLAUDE.md 대응)</span><br>
-├── george-kimi_developer_profile.md <span class="comment"># 개발자 프로필</span><br>
-├── mcjo.pro                          <span class="comment"># 비동기 지시사항 채널</span><br>
-├── memory\                           <span class="comment"># 핵심 기억 저장소</span><br>
-│   ├── MEMORY.md                    <span class="comment"># 핵심 기억</span><br>
-│   ├── lessons-learned.md           <span class="comment"># 22개 교훈</span><br>
-│   └── execution-workflow.md        <span class="comment"># 6단계 워크플로우</span><br>
-└── project001\                      <span class="comment"># 프로젝트별 메타 정보</span><br>
+?�� E:\George\Kimi\                    <span class="comment"># 메�? ?�보 (지?? 계획??</span><br>
+?��??� KIMI.md                          <span class="comment"># ?�심 지�?(CLAUDE.md ?�??</span><br>
+?��??� george-kimi_developer_profile.md <span class="comment"># 개발???�로??/span><br>
+?��??� mcjo.pro                          <span class="comment"># 비동�?지?�사??채널</span><br>
+?��??� memory\                           <span class="comment"># ?�심 기억 ?�?�소</span><br>
+??  ?��??� MEMORY.md                    <span class="comment"># ?�심 기억</span><br>
+??  ?��??� lessons-learned.md           <span class="comment"># 22�?교훈</span><br>
+??  ?��??� execution-workflow.md        <span class="comment"># 6?�계 ?�크?�로??/span><br>
+?��??� project001\                      <span class="comment"># ?�로?�트�?메�? ?�보</span><br>
 <br>
-📁 C:\George-Kimi-repo\               <span class="comment"># 개발 결과물 (실제 코드)</span>
+?�� E:\George\Kimi-repo\               <span class="comment"># 개발 결과�?(?�제 코드)</span>
 </div>
 
 <hr>
 
-<h2 id="setup">2. 초기 설정 및 환경 구축</h2>
+<h2 id="setup">2. 초기 ?�정 �??�경 구축</h2>
 
-<h3>2.1 필수 설치</h3>
+<h3>2.1 ?�수 ?�치</h3>
 <table>
     <tr>
-        <th>도구</th>
-        <th>용도</th>
-        <th>설치 명령</th>
+        <th>?�구</th>
+        <th>?�도</th>
+        <th>?�치 명령</th>
     </tr>
     <tr>
         <td><strong>Kimi CLI</strong></td>
-        <td>AI 개발자와의 대화</td>
+        <td>AI 개발?��????�??/td>
         <td><code>pip install kimi-cli</code></td>
     </tr>
     <tr>
         <td><strong>Git</strong></td>
-        <td>버전 관리</td>
+        <td>버전 관�?/td>
         <td><a href="https://git-scm.com/">git-scm.com</a></td>
     </tr>
     <tr>
         <td><strong>Python 3.10+</strong></td>
-        <td>스크립트 실행</td>
+        <td>?�크립트 ?�행</td>
         <td><a href="https://python.org/">python.org</a></td>
     </tr>
 </table>
 
-<h3>2.2 Kimi CLI 기본 사용법</h3>
+<h3>2.2 Kimi CLI 기본 ?�용�?/h3>
 
 <div class="command-box">
-<span class="comment"># 프로젝트 폴더에서 Kimi 시작</span><br>
-<span class="prompt">$</span> cd C:\George-Kimi<br><br>
-<span class="comment"># 기본 시작</span><br>
+<span class="comment"># ?�로?�트 ?�더?�서 Kimi ?�작</span><br>
+<span class="prompt">$</span> cd E:\George\Kimi<br><br>
+<span class="comment"># 기본 ?�작</span><br>
 <span class="prompt">$</span> kimi<br><br>
-<span class="comment"># 특정 파일을 컨텍스트로 시작</span><br>
+<span class="comment"># ?�정 ?�일??컨텍?�트�??�작</span><br>
 <span class="prompt">$</span> kimi --prompt "$(cat KIMI.md)"<br><br>
-<span class="comment"># 설정 파일로 시작</span><br>
+<span class="comment"># ?�정 ?�일�??�작</span><br>
 <span class="prompt">$</span> kimi --config-file kimi.project.toml
 </div>
 
-<h3>2.3 환경 변수 설정</h3>
-<p>Redmine 연동을 위한 API 키 설정:</p>
+<h3>2.3 ?�경 변???�정</h3>
+<p>Redmine ?�동???�한 API ???�정:</p>
 
 <div class="command-box">
 <span class="comment"># Windows (PowerShell)</span><br>
@@ -370,38 +370,38 @@
 
 <hr>
 
-<h2 id="agents">3. AGENTS.md 와 프로젝트 규칙 <span class="badge badge-hot">핵심</span></h2>
+<h2 id="agents">3. AGENTS.md ?� ?�로?�트 규칙 <span class="badge badge-hot">?�심</span></h2>
 
-<h3>3.1 AGENTS.md란?</h3>
+<h3>3.1 AGENTS.md?�?</h3>
 <p>
-    <code>AGENTS.md</code>는 AI 개발자가 프로젝트의 규칙과 컨텍스트를 이해하도록 돕는 파일입니다.
-    Claude의 <code>CLAUDE.md</code>와 유사한 개념입니다.
+    <code>AGENTS.md</code>??AI 개발?��? ?�로?�트??규칙�?컨텍?�트�??�해?�도�??�는 ?�일?�니??
+    Claude??<code>CLAUDE.md</code>?� ?�사??개념?�니??
 </p>
 
 <div class="info-box">
-    <strong>💡 Kimi에서 AGENTS.md 사용하기</strong><br>
-    Kimi CLI는 자동으로 AGENTS.md를 읽지 않습니다. 다음 방법 중 하나를 사용하세요:
+    <strong>?�� Kimi?�서 AGENTS.md ?�용?�기</strong><br>
+    Kimi CLI???�동?�로 AGENTS.md�??��? ?�습?�다. ?�음 방법 �??�나�??�용?�세??
 </div>
 
-<h3>3.2 방법 1: ~/.kimi/AGENTS.md (전역 설정)</h3>
-<p>사용자 홈 디렉토리의 <code>.kimi</code> 폴더에 AGENTS.md를 두면 모든 프로젝트에서 공통으로 적용됩니다.</p>
+<h3>3.2 방법 1: ~/.kimi/AGENTS.md (?�역 ?�정)</h3>
+<p>?�용?????�렉?�리??<code>.kimi</code> ?�더??AGENTS.md�??�면 모든 ?�로?�트?�서 공통?�로 ?�용?�니??</p>
 
 <div class="command-box">
-<span class="comment"># 전역 AGENTS.md 생성</span><br>
+<span class="comment"># ?�역 AGENTS.md ?�성</span><br>
 <span class="prompt">$</span> mkdir %USERPROFILE%\.kimi<br>
 <span class="prompt">$</span> notepad %USERPROFILE%\.kimi\AGENTS.md
 </div>
 
-<h3>3.3 방법 2: 프로젝트별 KIMI.md</h3>
-<p>각 프로젝트 루트에 <code>KIMI.md</code>를 두고 수동으로 로드합니다:</p>
+<h3>3.3 방법 2: ?�로?�트�?KIMI.md</h3>
+<p>�??�로?�트 루트??<code>KIMI.md</code>�??�고 ?�동?�로 로드?�니??</p>
 
 <div class="command-box">
-<span class="comment"># 프로젝트 루트에 KIMI.md 생성</span><br>
+<span class="comment"># ?�로?�트 루트??KIMI.md ?�성</span><br>
 <span class="prompt">$</span> kimi --prompt "$(cat KIMI.md)"
 </div>
 
-<h3>3.4 방법 3: VS Code Task 설정 <span class="badge badge-new">추천</span></h3>
-<p>VS Code를 사용한다면 <code>tasks.json</code>에 등록하면 편리합니다:</p>
+<h3>3.4 방법 3: VS Code Task ?�정 <span class="badge badge-new">추천</span></h3>
+<p>VS Code�??�용?�다�?<code>tasks.json</code>???�록?�면 ?�리?�니??</p>
 
 <pre><code>{
   "version": "2.0.0",
@@ -419,228 +419,228 @@
   ]
 }</code></pre>
 
-<h3>3.5 AGENTS.md 작성 템플릿</h3>
+<h3>3.5 AGENTS.md ?�성 ?�플�?/h3>
 
-<pre><code># 프로젝트: {프로젝트명}
+<pre><code># ?�로?�트: {?�로?�트�?
 
-## 기술 스택
-- 언어: C++ (MFC), C#
+## 기술 ?�택
+- ?�어: C++ (MFC), C#
 - 빌드: MSBuild, Visual Studio 2022
-- 플랫폼: Windows x86/x64
+- ?�랫?? Windows x86/x64
 
 ## 코딩 규칙
-- 들여쓰기: 4 spaces (탭 금지)
-- 인코딩: UTF-8 BOM
-- 주석: 한글 사용 가능
+- ?�여?�기: 4 spaces (??금�?)
+- ?�코?? UTF-8 BOM
+- 주석: ?��? ?�용 가??
 
-## 금지 사항
-- strcpy 사용 금지 (strcpy_s 사용)
-- malloc/free 직접 사용 금지
-- 하드코딩된 경로 금지
+## 금�? ?�항
+- strcpy ?�용 금�? (strcpy_s ?�용)
+- malloc/free 직접 ?�용 금�?
+- ?�드코딩??경로 금�?
 
 ## Git 규칙
-- 커밋 메시지: `[George-Kimi] {타입}: {설명}`
-- 브랜치: `feature/{작업명}`</code></pre>
+- 커밋 메시지: `[George-Kimi] {?�??: {?�명}`
+- 브랜�? `feature/{?�업�?`</code></pre>
 
 <hr>
 
-<h2 id="skills">4. /init 스킬과 활용법 <span class="badge badge-new">New</span></h2>
+<h2 id="skills">4. /init ?�킬�??�용�?<span class="badge badge-new">New</span></h2>
 
-<h3>4.1 /init 스킬이란?</h3>
+<h3>4.1 /init ?�킬?��??</h3>
 <p>
-    <code>/init</code>는 Kimi CLI의 내장 스킬로, 프로젝트를 초기화하거나 특정 작업을 시작할 때 사용합니다.
-    George-Kimi에서는 <code>/mcjo</code> 스킬을 주로 사용합니다.
+    <code>/init</code>??Kimi CLI???�장 ?�킬�? ?�로?�트�?초기?�하거나 ?�정 ?�업???�작?????�용?�니??
+    George-Kimi?�서??<code>/mcjo</code> ?�킬??주로 ?�용?�니??
 </p>
 
-<h3>4.2 사용자 정의 스킬 만들기</h3>
-<p>George-Kimi에서 사용하는 <code>/mcjo</code> 스킬은 다음과 같이 동작합니다:</p>
+<h3>4.2 ?�용???�의 ?�킬 만들�?/h3>
+<p>George-Kimi?�서 ?�용?�는 <code>/mcjo</code> ?�킬?� ?�음�?같이 ?�작?�니??</p>
 
 <ol class="step-list">
-    <li><strong>프로젝트 폴더 검색</strong><br>
-        <code>C:\George-Kimi\project*</code> 폴더를 번호 역순으로 확인합니다.
+    <li><strong>?�로?�트 ?�더 검??/strong><br>
+        <code>E:\George\Kimi\project*</code> ?�더�?번호 ??��?�로 ?�인?�니??
     </li>
-    <li><strong>mcjo.pro 파일 확인</strong><br>
-        각 프로젝트의 <code>mcjo.pro</code> 파일에서 [INPUT] 섹션을 확인합니다.</li>
-    <li><strong>지시사항 처리</strong><br>
-        지시사항이 있으면 처리하고, 없으면 메인 <code>mcjo.pro</code>를 확인합니다.</li>
+    <li><strong>mcjo.pro ?�일 ?�인</strong><br>
+        �??�로?�트??<code>mcjo.pro</code> ?�일?�서 [INPUT] ?�션???�인?�니??</li>
+    <li><strong>지?�사??처리</strong><br>
+        지?�사??�� ?�으�?처리?�고, ?�으�?메인 <code>mcjo.pro</code>�??�인?�니??</li>
     <li><strong>HISTORY 기록</strong><br>
-        처리 완료 후 [HISTORY] 섹션에 기록합니다.</li>
+        처리 ?�료 ??[HISTORY] ?�션??기록?�니??</li>
 </ol>
 
-<h3>4.3 mcjo.pro 파일 형식</h3>
+<h3>4.3 mcjo.pro ?�일 ?�식</h3>
 
-<pre><code># mcjo.pro - 비동기 지시사항 채널
+<pre><code># mcjo.pro - 비동�?지?�사??채널
 
 # ============================================
-# [INPUT] - 새 지시사항 작성 영역
+# [INPUT] - ??지?�사???�성 ?�역
 # ============================================
 >>>
-여기에 지시사항을 작성하세요.
-여러 줄도 가능합니다.
+?�기??지?�사??�� ?�성?�세??
+?�러 줄도 가?�합?�다.
 
 # ============================================
-# [HISTORY] - 처리 완료된 지시사항 기록
+# [HISTORY] - 처리 ?�료??지?�사??기록
 # ============================================
 
-# [DONE] 작업 내용 요약
-#   입력: 2026-02-12 10:00:00 | 완료: 2026-02-12 10:30:00
-#   프롬프트:
-#     원본 지시사항 내용
-#   → 처리 결과 요약</code></pre>
+# [DONE] ?�업 ?�용 ?�약
+#   ?�력: 2026-02-12 10:00:00 | ?�료: 2026-02-12 10:30:00
+#   ?�롬?�트:
+#     ?�본 지?�사???�용
+#   ??처리 결과 ?�약</code></pre>
 
 <div class="tip-box">
-    <strong>💡 mcjo.pro 사용 꿀팁</strong><br>
-    비동기 작업이 필요할 때 (예: 회의 중, 밤새 분석 필요 시) mcjo.pro에 지시사항을 적어두고<br>
-    나중에 <code>/mcjo</code> 명령으로 일괄 처리할 수 있습니다.
+    <strong>?�� mcjo.pro ?�용 꿀??/strong><br>
+    비동�??�업???�요????(?? ?�의 �? 밤새 분석 ?�요 ?? mcjo.pro??지?�사??�� ?�어?�고<br>
+    ?�중??<code>/mcjo</code> 명령?�로 ?�괄 처리?????�습?�다.
 </div>
 
 <hr>
 
-<h2 id="mcjo">5. /mcjo 스킬 상세 가이드</h2>
+<h2 id="mcjo">5. /mcjo ?�킬 ?�세 가?�드</h2>
 
-<h3>5.1 /mcjo 사용 시나리오</h3>
+<h3>5.1 /mcjo ?�용 ?�나리오</h3>
 
 <table>
     <tr>
-        <th>시나리오</th>
-        <th>사용 방법</th>
-        <th>예시</th>
+        <th>?�나리오</th>
+        <th>?�용 방법</th>
+        <th>?�시</th>
     </tr>
     <tr>
-        <td>긴급하지 않은 작업</td>
-        <td>mcjo.pro에 적고 나중에 처리</td>
-        <td>코드 리뷰, 문서 검토</td>
+        <td>긴급?��? ?��? ?�업</td>
+        <td>mcjo.pro???�고 ?�중??처리</td>
+        <td>코드 리뷰, 문서 검??/td>
     </tr>
     <tr>
-        <td>복잡한 분석 요청</td>
-        <td>상세한 지시사항 + 참조 파일 경로</td>
-        <td>vcxproj 분석, 의존성 분석</td>
+        <td>복잡??분석 ?�청</td>
+        <td>?�세??지?�사??+ 참조 ?�일 경로</td>
+        <td>vcxproj 분석, ?�존??분석</td>
     </tr>
     <tr>
-        <td>반복 작업</td>
-        <td>템플릿화된 지시사항</td>
-        <td>Redmine 일감 생성, 로그 분석</td>
+        <td>반복 ?�업</td>
+        <td>?�플릿화??지?�사??/td>
+        <td>Redmine ?�감 ?�성, 로그 분석</td>
     </tr>
     <tr>
-        <td>학습/질문</td>
-        <td>메인 mcjo.pro에 질문 작성</td>
-        <td>새로운 기술 학습, 모범 사례 질문</td>
+        <td>?�습/질문</td>
+        <td>메인 mcjo.pro??질문 ?�성</td>
+        <td>?�로??기술 ?�습, 모범 ?��? 질문</td>
     </tr>
 </table>
 
-<h3>5.2 mcjo.pro 작성 모범 사례</h3>
+<h3>5.2 mcjo.pro ?�성 모범 ?��?</h3>
 
 <div class="warning-box">
-    <strong>⚠️ 주의사항</strong><br>
-    - 한 번에 하나의 주제만 작성하세요<br>
-    - 파일 경로는 절대 경로로 적어주세요<br>
-    - 예상 산출물을 명시해주세요
+    <strong>?�️ 주의?�항</strong><br>
+    - ??번에 ?�나??주제�??�성?�세??br>
+    - ?�일 경로???��? 경로�??�어주세??br>
+    - ?�상 ?�출물을 명시?�주?�요
 </div>
 
-<p><strong>좋은 예:</strong></p>
+<p><strong>좋�? ??</strong></p>
 <pre><code>>>>
-[분석 요청] C:\WORK\SOURCE\SaaS\RV\asp\agent\RVAgent.sln 구조 분석
+[분석 ?�청] C:\WORK\SOURCE\SaaS\RV\asp\agent\RVAgent.sln 구조 분석
 
-목표: 18개 Manager로 리팩토링을 위한 현재 구조 파악
+목표: 18�?Manager�?리팩?�링???�한 ?�재 구조 ?�악
 
-요구사항:
-1. sln에 포함된 모든 vcxproj 목록 추출
-2. 각 vcxproj의 주요 클래스/함수 파악
-3. RVAgentDlg.cpp의 함수들을 Manager별로 분류
-   - IPCManager: Shared Memory, Named Pipe 관련
-   - SessionManager: 로그인/아웃 관련
-   - NetworkManager: HTTP 통신 관련
+?�구?�항:
+1. sln???�함??모든 vcxproj 목록 추출
+2. �?vcxproj??주요 ?�래???�수 ?�악
+3. RVAgentDlg.cpp???�수?�을 Manager별로 분류
+   - IPCManager: Shared Memory, Named Pipe 관??
+   - SessionManager: 로그???�웃 관??
+   - NetworkManager: HTTP ?�신 관??
 
-산출물: C:\George-Kimi\project001\01-analysis.md</code></pre>
+?�출�? E:\George\Kimi\project001\01-analysis.md</code></pre>
 
 <hr>
 
-<h2 id="tips">6. Kimi AI 활용 꿀팁 <span class="badge badge-hot">핵심</span></h2>
+<h2 id="tips">6. Kimi AI ?�용 꿀??<span class="badge badge-hot">?�심</span></h2>
 
-<h3>6.1 컨텍스트 관리</h3>
+<h3>6.1 컨텍?�트 관�?/h3>
 
 <div class="feature-grid">
     <div class="feature-card">
-        <h4>📁 파일 첨부</h4>
-        <p>분석할 파일을 직접 지정:</p>
-        <code>"C:\WORK\SOURCE\project\main.cpp 파일을 분석해줘"</code>
+        <h4>?�� ?�일 첨�?</h4>
+        <p>분석???�일??직접 지??</p>
+        <code>"C:\WORK\SOURCE\project\main.cpp ?�일??분석?�줘"</code>
     </div>
     <div class="feature-card">
-        <h4>🔍 Grep 활용</h4>
-        <p>파일 먼저 찾기:</p>
-        <code>"HttpPostEx 함수가 있는 파일을 찾아줘"</code>
+        <h4>?�� Grep ?�용</h4>
+        <p>?�일 먼�? 찾기:</p>
+        <code>"HttpPostEx ?�수가 ?�는 ?�일??찾아�?</code>
     </div>
     <div class="feature-card">
-        <h4>📋 메모리 활용</h4>
-        <p>이전 대화 참조:</p>
-        <code>"방금 분석한 RVAgentDlg.cpp에서..."</code>
+        <h4>?�� 메모�??�용</h4>
+        <p>?�전 ?�??참조:</p>
+        <code>"방금 분석??RVAgentDlg.cpp?�서..."</code>
     </div>
     <div class="feature-card">
-        <h4>🎯 구체적 지시</h4>
-        <p>명확한 요구사항:</p>
-        <code>"strcpy를 strcpy_s로 변환하는 스크립트 작성"</code>
+        <h4>?�� 구체??지??/h4>
+        <p>명확???�구?�항:</p>
+        <code>"strcpy�?strcpy_s�?변?�하???�크립트 ?�성"</code>
     </div>
 </div>
 
-<h3>6.2 효율적인 프롬프트 작성법</h3>
+<h3>6.2 ?�율?�인 ?�롬?�트 ?�성�?/h3>
 
 <table>
     <tr>
-        <th>❌ 피해야 할 표현</th>
-        <th>✅ 올바른 표현</th>
-        <th>이유</th>
+        <th>???�해?????�현</th>
+        <th>???�바�??�현</th>
+        <th>?�유</th>
     </tr>
     <tr>
-        <td>"이 프로젝트 분석해줘"</td>
-        <td>"C:\Project\의 MVC 구조를 분석하고 Model 클래스 목록을 만들어줘"</td>
-        <td>구체적 범위 지정</td>
+        <td>"???�로?�트 분석?�줘"</td>
+        <td>"C:\Project\??MVC 구조�?분석?�고 Model ?�래??목록??만들?�줘"</td>
+        <td>구체??범위 지??/td>
     </tr>
     <tr>
-        <td>"빠르게 해줘"</td>
-        <td>"Phase 1만 먼저 분석하고 보고해줘"</td>
-        <td>단계별 접근</td>
+        <td>"빠르�??�줘"</td>
+        <td>"Phase 1�?먼�? 분석?�고 보고?�줘"</td>
+        <td>?�계�??�근</td>
     </tr>
     <tr>
-        <td>"잘못된 것 같아"</td>
-        <td>"Line 45의 buffer[size]가 overflow 위험이 있는지 확인해줘"</td>
-        <td>구체적 문제 제기</td>
+        <td>"?�못??�?같아"</td>
+        <td>"Line 45??buffer[size]가 overflow ?�험???�는지 ?�인?�줘"</td>
+        <td>구체??문제 ?�기</td>
     </tr>
 </table>
 
-<h3>6.3 Windows 개발자를 위한 특화 팁</h3>
+<h3>6.3 Windows 개발?��? ?�한 ?�화 ??/h3>
 
 <div class="tip-box">
-    <strong>🪟 Windows 특화 활용법</strong>
+    <strong>?�� Windows ?�화 ?�용�?/strong>
 </div>
 
 <ol>
-    <li><strong>경로 표시 주의</strong><br>
-        PowerShell에서 경로에 공백이 있으면 따옴표로 감싸세요:
+    <li><strong>경로 ?�시 주의</strong><br>
+        PowerShell?�서 경로??공백???�으�??�옴?�로 감싸?�요:
         <code>"C:\Program Files\Project\"</code>
     </li>
-    <li><strong>인코딩 문제</strong><br>
-        한글이 포함된 파일은 UTF-8 BOM으로 저장하세요.
+    <li><strong>?�코??문제</strong><br>
+        ?��????�함???�일?� UTF-8 BOM?�로 ?�?�하?�요.
     </li>
-    <li><strong>빌드 결과 확인</strong><br>
-        <code>msbuild</code> 출력을 파일로 저장하고 분석 요청:
+    <li><strong>빌드 결과 ?�인</strong><br>
+        <code>msbuild</code> 출력???�일�??�?�하�?분석 ?�청:
         <code>msbuild solution.sln > build.log</code>
     </li>
-    <li><strong>레지스트리 작업</strong><br>
-        레지스트리 수정 스크립트는 반드시 백업 포함:
+    <li><strong>?��??�트�??�업</strong><br>
+        ?��??�트�??�정 ?�크립트??반드??백업 ?�함:
         <code>reg export "HKLM\Software\App" backup.reg</code>
     </li>
 </ol>
 
 <hr>
 
-<h2 id="advanced">7. 고급 주제: 서버, DB, MCP</h2>
+<h2 id="advanced">7. 고급 주제: ?�버, DB, MCP</h2>
 
-<h3>7.1 서버 연동</h3>
+<h3>7.1 ?�버 ?�동</h3>
 
-<h4>Redmine API 활용</h4>
-<p>George-Kimi는 Redmine과 연동하여 일감 관리를 자동화할 수 있습니다:</p>
+<h4>Redmine API ?�용</h4>
+<p>George-Kimi??Redmine�??�동?�여 ?�감 관리�? ?�동?�할 ???�습?�다:</p>
 
-<pre><code># Redmine 일감 생성 예시
+<pre><code># Redmine ?�감 ?�성 ?�시
 import requests
 import os
 
@@ -654,7 +654,7 @@ def create_issue(subject, description, parent_id=None):
             "tracker_id": 1,
             "subject": subject,
             "description": description,
-            "assigned_to_id": 871,  # 조명철
+            "assigned_to_id": 871,  # 조명�?
             "priority_id": 2,
             "status_id": 1,
         }
@@ -669,148 +669,148 @@ def create_issue(subject, description, parent_id=None):
     )
     return response.json()</code></pre>
 
-<h3>7.2 데이터베이스 작업</h3>
+<h3>7.2 ?�이?�베?�스 ?�업</h3>
 
 <div class="warning-box">
-    <strong>⚠️ DB 스키마 변경은 팀 리드 승인 필요</strong><br>
-    George-Kimi는 DB 스키마 변경 권한이 없습니다. SELECT 쿼리 분석만 가능합니다.
+    <strong>?�️ DB ?�키�?변경�? ?� 리드 ?�인 ?�요</strong><br>
+    George-Kimi??DB ?�키�?변�?권한???�습?�다. SELECT 쿼리 분석�?가?�합?�다.
 </div>
 
-<h4>안전한 DB 분석 패턴</h4>
-<pre><code># 1. 스키마 분석 (읽기 전용)
-"C:\Project\schema.sql 파일에서 테이블 관계를 분석해줘"
+<h4>?�전??DB 분석 ?�턴</h4>
+<pre><code># 1. ?�키�?분석 (?�기 ?�용)
+"C:\Project\schema.sql ?�일?�서 ?�이�?관계�? 분석?�줘"
 
-# 2. 쿼리 최적화 제안
-"이 SQL 쿼리의 실행 계획을 분석하고 개선점을 제시해줘"
+# 2. 쿼리 최적???�안
+"??SQL 쿼리???�행 계획??분석?�고 개선?�을 ?�시?�줘"
 
-# 3. ORM 매핑 생성
-"스키마를 기반으로 C# Entity 클래스를 생성해줘"</code></pre>
+# 3. ORM 매핑 ?�성
+"?�키마�? 기반?�로 C# Entity ?�래?��? ?�성?�줘"</code></pre>
 
 <h3>7.3 MCP (Model Context Protocol)</h3>
 
-<p>MCP는 AI 에이전트가 외부 도구와 통신하는 표준 프로토콜입니다.</p>
+<p>MCP??AI ?�이?�트가 ?��? ?�구?� ?�신?�는 ?��? ?�로?�콜?�니??</p>
 
-<h4>MCP 서버 종류</h4>
+<h4>MCP ?�버 종류</h4>
 <table>
     <tr>
-        <th>서버</th>
-        <th>용도</th>
-        <th>상태</th>
+        <th>?�버</th>
+        <th>?�도</th>
+        <th>?�태</th>
     </tr>
     <tr>
         <td>redmine-mcp-server</td>
-        <td>Redmine 일감 관리</td>
-        <td>팀 리드 승인 필요</td>
+        <td>Redmine ?�감 관�?/td>
+        <td>?� 리드 ?�인 ?�요</td>
     </tr>
     <tr>
         <td>google-docs-mcp</td>
-        <td>문서 생성/수정</td>
-        <td>팀 리드 승인 필요</td>
+        <td>문서 ?�성/?�정</td>
+        <td>?� 리드 ?�인 ?�요</td>
     </tr>
     <tr>
         <td>filesystem-mcp</td>
-        <td>파일 시스템 접근</td>
-        <td>제한적 사용 가능</td>
+        <td>?�일 ?�스???�근</td>
+        <td>?�한???�용 가??/td>
     </tr>
 </table>
 
 <div class="tip-box">
-    <strong>💡 MCP 사용 시 고려사항</strong><br>
-    - 보안 검토가 필요한 외부 연동은 팀 리드 승인 필수<br>
-    - API 키는 환경변수로 관리<br>
-    - 민감 정보는 로그에 남기지 않기
+    <strong>?�� MCP ?�용 ??고려?�항</strong><br>
+    - 보안 검?��? ?�요???��? ?�동?� ?� 리드 ?�인 ?�수<br>
+    - API ?�는 ?�경변?�로 관�?br>
+    - 민감 ?�보??로그???�기지 ?�기
 </div>
 
 <hr>
 
-<h2 id="workflow">8. 실전 워크플로우 예시</h2>
+<h2 id="workflow">8. ?�전 ?�크?�로???�시</h2>
 
-<h3>8.1 대규소 마이그레이션 프로젝트</h3>
+<h3>8.1 ?�규소 마이그레?�션 ?�로?�트</h3>
 
 <ol class="step-list">
-    <li><strong>Phase 0: 분석 계획 수립</strong><br>
-        <code>/mcjo</code> 실행 → 분석 범위 확인 → WBS 작성
+    <li><strong>Phase 0: 분석 계획 ?�립</strong><br>
+        <code>/mcjo</code> ?�행 ??분석 범위 ?�인 ??WBS ?�성
     </li>
-    <li><strong>Phase 1: 코드베이스 분석</strong><br>
-        <code>"C:\Project\ 소스 구조를 분석하고 문서화해줘"</code>
+    <li><strong>Phase 1: 코드베이??분석</strong><br>
+        <code>"C:\Project\ ?�스 구조�?분석?�고 문서?�해�?</code>
     </li>
-    <li><strong>Phase 2: Redmine 일감 생성</strong><br>
-        George-Kimi가 Python 스크립트로 일괄 생성
+    <li><strong>Phase 2: Redmine ?�감 ?�성</strong><br>
+        George-Kimi가 Python ?�크립트�??�괄 ?�성
     </li>
-    <li><strong>Phase 3: 변환 스크립트 작성</strong><br>
-        <code>"Win32→x64 변환 스크립트를 작성해줘"</code>
+    <li><strong>Phase 3: 변???�크립트 ?�성</strong><br>
+        <code>"Win32?�x64 변???�크립트�??�성?�줘"</code>
     </li>
-    <li><strong>Phase 4: 정합성 검증</strong><br>
-        계획서 ↔ Redmine ↔ 스크립트 3자 정합성 확인
+    <li><strong>Phase 4: ?�합??검�?/strong><br>
+        계획????Redmine ???�크립트 3???�합???�인
     </li>
-    <li><strong>Phase 5: 변환 수행</strong><br>
-        스크립트 실행 → 빌드 테스트 → Git 커밋
+    <li><strong>Phase 5: 변???�행</strong><br>
+        ?�크립트 ?�행 ??빌드 ?�스????Git 커밋
     </li>
-    <li><strong>Phase 6: 최종 검증</strong><br>
-        회귀 테스트 → 성능 벤치마크 → 종료 보고
+    <li><strong>Phase 6: 최종 검�?/strong><br>
+        ?��? ?�스?????�능 벤치마크 ??종료 보고
     </li>
 </ol>
 
-<h3>8.2 일상적인 버그 수정 워크플로우</h3>
+<h3>8.2 ?�상?�인 버그 ?�정 ?�크?�로??/h3>
 
-<pre><code># 1. 버그 리포트 접수 (Redmine #12345)
+<pre><code># 1. 버그 리포???�수 (Redmine #12345)
 
-# 2. George-Kimi에게 분석 요청
-"C:\WORK\SOURCE\App\Module.cpp의 CrashDump를 분석해줘
- 스택 트레이스: [첨부]"
+# 2. George-Kimi?�게 분석 ?�청
+"C:\WORK\SOURCE\App\Module.cpp??CrashDump�?분석?�줘
+ ?�택 ?�레?�스: [첨�?]"
 
-# 3. 원인 분석 및 수정안 제시
-#    → George-Kimi가 원인 분석 + 수정 코드 제안
+# 3. ?�인 분석 �??�정???�시
+#    ??George-Kimi가 ?�인 분석 + ?�정 코드 ?�안
 
-# 4. 수정 코드 검토
-#    → 개발자가 제안된 코드 리뷰
+# 4. ?�정 코드 검??
+#    ??개발?��? ?�안??코드 리뷰
 
 # 5. Git 커밋
-[George-Kimi] fix(#12345): null pointer dereference 수정
+[George-Kimi] fix(#12345): null pointer dereference ?�정
 
-# 6. Redmine 상태 업데이트
-#    → 상태: 해결, 진척도: 100%</code></pre>
+# 6. Redmine ?�태 ?�데?�트
+#    ???�태: ?�결, 진척?? 100%</code></pre>
 
-<h3>8.3 신규 기능 개발 워크플로우</h3>
+<h3>8.3 ?�규 기능 개발 ?�크?�로??/h3>
 
-<pre><code># 1. 기능 명세 작성
-"RVAgent에 파일 로테이션 기능을 추가하려고 해.
- 요구사항: [상세 요구사항]
- C#으로 구현하고, 기존 LogManager 클래스에 통합해줘"
+<pre><code># 1. 기능 명세 ?�성
+"RVAgent???�일 로테?�션 기능??추�??�려�???
+ ?�구?�항: [?�세 ?�구?�항]
+ C#?�로 구현?�고, 기존 LogManager ?�래?�에 ?�합?�줘"
 
-# 2. 기술 설계
-#    → George-Kimi가 클래스 설계 + 인터페이스 정의
+# 2. 기술 ?�계
+#    ??George-Kimi가 ?�래???�계 + ?�터?�이???�의
 
 # 3. 구현
-#    → George-Kimi가 코드 작성
+#    ??George-Kimi가 코드 ?�성
 
-# 4. 단위 테스트 작성
-#    → George-Kimi가 테스트 케이스 생성
+# 4. ?�위 ?�스???�성
+#    ??George-Kimi가 ?�스??케?�스 ?�성
 
-# 5. 코드 리뷰 및 머지
-#    → 팀 리드 승인 후 Git에 푸시</code></pre>
+# 5. 코드 리뷰 �?머�?
+#    ???� 리드 ?�인 ??Git???�시</code></pre>
 
 <hr>
 
-<h2>🎯 마무리</h2>
+<h2>?�� 마무�?/h2>
 
-<p>George-Kimi는 단순한 AI 도구가 아닌, <strong>팀의 시니어 개발자</strong>로서 활동합니다.</p>
+<p>George-Kimi???�순??AI ?�구가 ?�닌, <strong>?�???�니??개발??/strong>로서 ?�동?�니??</p>
 
 <div class="tip-box">
-    <strong>✅ George-Kimi와 협업할 때 기억할 점</strong>
+    <strong>??George-Kimi?� ?�업????기억????/strong>
     <ol>
-        <li><strong>계획 우선</strong>: 구현 전 항상 계획을 세우고 승인받으세요</li>
-        <li><strong>구체적 지시</strong>: "잘 해줘"보다 "이 파일의 X 함수를 Y로 수정해줘"가 더 효과적</li>
-        <li><strong>피드백 주기</strong>: 결과가 마음에 안 들면 구체적으로 피드백하세요</li>
-        <li><strong>교훈 공유</strong>: 새로 발견한 패턴이나 실수는 lessons-learned.md에 기록하세요</li>
-        <li><strong>Git 활용</strong>: WBS 단위로 자주 커밋하세요</li>
+        <li><strong>계획 ?�선</strong>: 구현 ????�� 계획???�우�??�인받으?�요</li>
+        <li><strong>구체??지??/strong>: "???�줘"보다 "???�일??X ?�수�?Y�??�정?�줘"가 ???�과??/li>
+        <li><strong>?�드�?주기</strong>: 결과가 마음?????�면 구체?�으�??�드백하?�요</li>
+        <li><strong>교훈 공유</strong>: ?�로 발견???�턴?�나 ?�수??lessons-learned.md??기록?�세??/li>
+        <li><strong>Git ?�용</strong>: WBS ?�위�??�주 커밋?�세??/li>
     </ol>
 </div>
 
 <hr>
 
 <p style="text-align:center;color:var(--text-secondary);margin-top:40px;">
-    <em>George-Kimi는 George-Claude의 어깨 위에 서서 더 멀리 나아갑니다.</em><br>
+    <em>George-Kimi??George-Claude???�깨 ?�에 ?�서 ??멀�??�아갑니??</em><br>
     <em>Powered by Kimi 2.5k (Moonshot AI)</em>
 </p>
 
@@ -819,13 +819,13 @@ function toggleTheme() {
     const html = document.documentElement;
     const isDark = html.getAttribute('data-theme') === 'dark';
     html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-    document.getElementById('theme-icon').textContent = isDark ? '🌙' : '☀️';
-    document.getElementById('theme-text').textContent = isDark ? '다크 모드' : '라이트 모드';
+    document.getElementById('theme-icon').textContent = isDark ? '?��' : '?��?;
+    document.getElementById('theme-text').textContent = isDark ? '?�크 모드' : '?�이??모드';
 }
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.documentElement.setAttribute('data-theme', 'dark');
-    document.getElementById('theme-icon').textContent = '☀️';
-    document.getElementById('theme-text').textContent = '라이트 모드';
+    document.getElementById('theme-icon').textContent = '?��?;
+    document.getElementById('theme-text').textContent = '?�이??모드';
 }
 </script>
 

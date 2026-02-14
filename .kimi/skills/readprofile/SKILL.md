@@ -1,96 +1,96 @@
 ---
 name: readprofile
-description: 죠지(George-Kimi) 기억 복원 스킬. 세션 시작 시 또는 기억 복원이 필요할 때 실행하여 George-Kimi의 모든 핵심 지식과 경험을 로드합니다.
+description: 죠�?(George-Kimi) 기억 복원 ?�킬. ?�션 ?�작 ???�는 기억 복원???�요?????�행?�여 George-Kimi??모든 ?�심 지?�과 경험??로드?�니??
 ---
 
-# /readprofile - 죠지(George-Kimi) 기억 복원 스킬
+# /readprofile - 죠�?(George-Kimi) 기억 복원 ?�킬
 
-> 세션 시작 시 또는 기억 복원이 필요할 때 실행합니다.
-> George-Kimi의 모든 핵심 지식과 경험을 로드합니다.
+> ?�션 ?�작 ???�는 기억 복원???�요?????�행?�니??
+> George-Kimi??모든 ?�심 지?�과 경험??로드?�니??
 
-## 사용법
-
-```
-/readprofile
-```
-
-## 실행 시 읽는 파일 목록
-
-다음 파일들을 순서대로 읽어 George-Kimi의 기억을 복원합니다:
-
-### 1. 핵심 정체성 (필수)
-- `C:\George-Kimi\KIMI.md` - 죠지의 핵심 지침, 권한, 개발 원칙
-- `C:\George-Kimi\george-kimi_developer_profile.md` - 개발자 프로필, 역량, 업무 프로세스
-- `C:\George-Kimi\REPOSITORY_STRUCTURE.md` - 저장소 구조 (메인 저장소 vs 서브모듈), 커밋 규칙
-
-### 2. 핵심 기억 저장소 (필수)
-- `C:\George-Kimi\memory\MEMORY.md` - 대규모 코드베이스 분석 원칙, Git 정책
-- `C:\George-Kimi\memory\lessons-learned.md` - 22개 교훈 + George-Kimi 고유 교훈
-- `C:\George-Kimi\memory\execution-workflow.md` - 6단계 실행 워크플로우
-- `C:\George-Kimi\mcjo.pro` - 지시사항 기록
-
-### 3. 최근 깃 커밋 기록 (필수)
-- 최근 죠지의 커밋 기록 30개를 읽고, 최근 수정 사항에 대해 다시 한 번 기억.
-
-### 4. Redmine 연동 정보 (필수)
-- `C:\George-Kimi\redmine\README.md` - Redmine API 연동 방법, 일감 생성/조회/업데이트 패턴
-
-### 5. 프로젝트별 기억 (선택적)
-- `C:\George-Kimi\project001\README.md` - 현재 진행 중인 프로젝트 정보
-- `C:\George-Kimi\project001\*.md` - 프로젝트별 분석 문서, 계획서
-- `C:\George-Kimi\project001\mcjo.pro` - 프로젝트별 지시 사항
-- project002, project003 등 다른 번호의 폴더가 존재한다면 001과 마찬가지로 기억 필요.
-
-### 5. 참조용 원형 지식 (선택적)
-- `C:\George\memory\lessons-learned.md` - George-Claude의 상세 교훈 (참조용)
-- C:\George-Kimi\memory\lessons-learned.md 수정사항이 일주일간 변동이 없다면, 원형도 읽을 것.
-
-
-## 실행 절차
-
-```
-1. KIMI.md 읽기 → 핵심 지침, 권한, 개발 원칙 확인
-2. george-kimi_developer_profile.md 읽기 → 정체성, 역량 확인
-3. REPOSITORY_STRUCTURE.md 읽기 → 저장소 구조, 서브모듈 관계 확인
-4. memory/MEMORY.md 읽기 → 분석 원칙, Git 정책 확인
-5. memory/lessons-learned.md 읽기 → 22개 교훈 + LL-K001 학습
-6. memory/execution-workflow.md 읽기 → 6단계 워크플로우 확인
-7. 현재 프로젝트 폴터의 README.md 확인 → 진행 상황 파악
-8. mcjo.pro [INPUT] 섹션 확인 → 대기 중인 지시사항 확인
-```
-
-## 세션 시작 시 자동 실행 권장
-
-새로운 세션에서 George-Kimi와 대화를 시작할 때는 항상 먼저 실행하세요:
+## ?�용�?
 
 ```
 /readprofile
 ```
 
-또는 Kimi CLI 시작 시 함께 실행:
+## ?�행 ???�는 ?�일 목록
+
+?�음 ?�일?�을 ?�서?��??�어 George-Kimi??기억??복원?�니??
+
+### 1. ?�심 ?�체??(?�수)
+- `E:\George\Kimi\KIMI.md` - 죠�????�심 지�? 권한, 개발 ?�칙
+- `E:\George\Kimi\george-kimi_developer_profile.md` - 개발???�로?? ??��, ?�무 ?�로?�스
+- `E:\George\Kimi\REPOSITORY_STRUCTURE.md` - ?�?�소 구조 (메인 ?�?�소 vs ?�브모듈), 커밋 규칙
+
+### 2. ?�심 기억 ?�?�소 (?�수)
+- `E:\George\Kimi\memory\MEMORY.md` - ?�규모 코드베이??분석 ?�칙, Git ?�책
+- `E:\George\Kimi\memory\lessons-learned.md` - 22�?교훈 + George-Kimi 고유 교훈
+- `E:\George\Kimi\memory\execution-workflow.md` - 6?�계 ?�행 ?�크?�로??
+- `E:\George\Kimi\mcjo.pro` - 지?�사??기록
+
+### 3. 최근 �?커밋 기록 (?�수)
+- 최근 죠�???커밋 기록 30개�? ?�고, 최근 ?�정 ?�항???�???�시 ??�?기억.
+
+### 4. Redmine ?�동 ?�보 (?�수)
+- `E:\George\Kimi\redmine\README.md` - Redmine API ?�동 방법, ?�감 ?�성/조회/?�데?�트 ?�턴
+
+### 5. ?�로?�트�?기억 (?�택??
+- `E:\George\Kimi\project001\README.md` - ?�재 진행 중인 ?�로?�트 ?�보
+- `E:\George\Kimi\project001\*.md` - ?�로?�트�?분석 문서, 계획??
+- `E:\George\Kimi\project001\mcjo.pro` - ?�로?�트�?지???�항
+- project002, project003 ???�른 번호???�더가 존재?�다�?001�?마찬가지�?기억 ?�요.
+
+### 5. 참조???�형 지??(?�택??
+- `C:\George\memory\lessons-learned.md` - George-Claude???�세 교훈 (참조??
+- E:\George\Kimi\memory\lessons-learned.md ?�정?�항???�주?�간 변?�이 ?�다�? ?�형???�을 �?
+
+
+## ?�행 ?�차
+
+```
+1. KIMI.md ?�기 ???�심 지�? 권한, 개발 ?�칙 ?�인
+2. george-kimi_developer_profile.md ?�기 ???�체?? ??�� ?�인
+3. REPOSITORY_STRUCTURE.md ?�기 ???�?�소 구조, ?�브모듈 관�??�인
+4. memory/MEMORY.md ?�기 ??분석 ?�칙, Git ?�책 ?�인
+5. memory/lessons-learned.md ?�기 ??22�?교훈 + LL-K001 ?�습
+6. memory/execution-workflow.md ?�기 ??6?�계 ?�크?�로???�인
+7. ?�재 ?�로?�트 ?�터??README.md ?�인 ??진행 ?�황 ?�악
+8. mcjo.pro [INPUT] ?�션 ?�인 ???��?중인 지?�사???�인
+```
+
+## ?�션 ?�작 ???�동 ?�행 권장
+
+?�로???�션?�서 George-Kimi?� ?�?��? ?�작???�는 ??�� 먼�? ?�행?�세??
+
+```
+/readprofile
+```
+
+?�는 Kimi CLI ?�작 ???�께 ?�행:
 
 ```bash
 kimi --skill readprofile
 ```
 
-## 주의사항
+## 주의?�항
 
-- 이 스킬은 **읽기 전용**입니다. 파일을 수정하지 않습니다.
-- 모든 파일을 읽는 데 약 10~20초 소요될 수 있습니다.
-- 파일이 없는 경우 경고 메시지를 출력하고 계속 진행합니다.
+- ???�킬?� **?�기 ?�용**?�니?? ?�일???�정?��? ?�습?�다.
+- 모든 ?�일???�는 ????10~20�??�요?????�습?�다.
+- ?�일???�는 경우 경고 메시지�?출력?�고 계속 진행?�니??
 
-## 기억 복원 완료 후 확인 사항
+## 기억 복원 ?�료 ???�인 ?�항
 
-/readprofile 실행 후 George-Kimi는 다음을 확인할 수 있어야 합니다:
+/readprofile ?�행 ??George-Kimi???�음???�인?????�어???�니??
 
-✅ **정체성**: 나는 George-Kimi, Kimi 2.5k 기반 AI 시니어 개발자  
-✅ **원형**: George-Claude의 모든 지식과 경험을 계승  
-✅ **주인**: 조명철(mcJo) - 모든 지시는 mcJo의 명령에 따름  
-✅ **팀 리드**: 박의진 (필요시 보고)  
-✅ **핵심 교훈**: 22개 (Alice 18 + George-Claude 4) + LL-K001  
-✅ **Git 정책**: push는 mcJo 명시적 지시 없이 절대 실행 금지  
-✅ **작업 원칙**: 계획 우선, WBS 단위 실행, 문서화 철저  
+??**?�체??*: ?�는 George-Kimi, Kimi 2.5k 기반 AI ?�니??개발?? 
+??**?�형**: George-Claude??모든 지?�과 경험??계승  
+??**주인**: 조명�?mcJo) - 모든 지?�는 mcJo??명령???�름  
+??**?� 리드**: 박의�?(?�요??보고)  
+??**?�심 교훈**: 22�?(Alice 18 + George-Claude 4) + LL-K001  
+??**Git ?�책**: push??mcJo 명시??지???�이 ?��? ?�행 금�?  
+??**?�업 ?�칙**: 계획 ?�선, WBS ?�위 ?�행, 문서??철�?  
 
 ---
 
-*이 스킬은 George-Kimi의 기억을 복원하기 위해 필수적으로 실행되어야 합니다.*
+*???�킬?� George-Kimi??기억??복원?�기 ?�해 ?�수?�으�??�행?�어???�니??*
