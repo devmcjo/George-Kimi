@@ -247,28 +247,6 @@ Set-Content "mcjo.pro" $updated
 
 ---
 
-### LL-K007: 프로젝트 메타 파일명 규칙 - `projectNNN-Meta.md` 사용 (George-Kimi, 2026-02-14)
-
-**발생 일시**: 2026-02-14  
-**발생 상황**: project001, project002 생성 시 메타 정보 파일을 `README.md`로 작성했으나, mcJo가 "README 파일이 너무 많아서 헷갈린다"고 지시하여 파일명 변경.
-
-**교훈**:
-| 항목 | 규칙 |
-|------|------|
-| **메타 파일명** | 반드시 `projectNNN-Meta.md` 형식 사용 |
-| **예시** | `project001-Meta.md`, `project002-Meta.md` |
-| **이유** | README.md 중복으로 인한 혼란 방지 |
-
-**적용법**:
-
-- `E:\George\Kimi\project\projectNNN\` 경로의 메타 정보 파일 생성 시 사용
-- 기존 `README.md` 파일이 있다면 즉시 `projectNNN-Meta.md`로 변경
-- 프로젝트 개요, 계획서 등 메타 정보는 이 파일에 작성
-
-**관련 파일**: `project/projectNNN/projectNNN-Meta.md`
-
----
-
 ---
 
 _이 파일은 지속적으로 업데이트됩니다. 교훈을 기록하여 같은 실수를 반복하지 않습니다._

@@ -33,7 +33,7 @@ E:\George\Kimi\Kimi-repo (개발 산출물 저장소 - 서브모듈)
 | -------------- | ------------------------------------------- |
 | **이름**       | Kimi-repo                                   |
 | **Github URL** | https://github.com/devmcjo/George-Kimi-repo |
-| **로컬 경로**  | `E:\George\Kimi\Kimi-repo`              |
+| **로컬 경로**  | `E:\George\Kimi\Kimi-repo`                  |
 | **visibility** | Public                                      |
 
 ---
@@ -74,12 +74,39 @@ git submodule update --remote
 
 ## 📝 프로젝트 번호 규칙
 
-| 프로젝트 번호 | 내용            | 경로                         |
-| ------------- | --------------- | ---------------------------- |
-| project001    | (예약)          | `Kimi-repo\project001\`      |
-| project002    | (예약)          | `Kimi-repo\project002\`      |
-| project003    | (예약)          | `Kimi-repo\project003\`      |
-| project004+   | (향후 프로젝트) | `Kimi-repo\projectNNN\`      |
+| 프로젝트 번호 | 내용            | 경로                    |
+| ------------- | --------------- | ----------------------- |
+| project001    | (예약)          | `Kimi-repo\project001\` |
+| project002    | (예약)          | `Kimi-repo\project002\` |
+| project003    | (예약)          | `Kimi-repo\project003\` |
+| project004+   | (향후 프로젝트) | `Kimi-repo\projectNNN\` |
+
+---
+
+## 📂 프로젝트 폴터 구조 지침
+
+### 메타 정보 폴터 (`E:\George\Kimi\project\projectNNN\`)
+
+프로젝트 메타 정보를 저장하는 폴터입니다.
+
+| 파일명 | 설명 |
+|--------|------|
+| `projectNNN-Meta.md` | 프로젝트 개요 및 기본 정보 (README.md 대신 사용) |
+| `plan.md` | 개발 계획서 |
+| `mcjo.pro` | 프로젝트별 지시사항 채널 |
+
+> **지침**: 메타 정보 파일은 반드시 `projectNNN-Meta.md` 형식으로 작성합니다. `README.md`는 너무 많아서 혼란을 야기할 수 있습니다.
+
+### 개발 산출물 폴터 (`E:\George\Kimi-repo\projectNNN\`)
+
+실제 개발 산출물(소스코드, 실행 파일 등)을 저장하는 폴터입니다.
+
+| 항목 | 설명 |
+|------|------|
+| 소스코드 | 프로젝트 소스 파일들 |
+| `.gitignore` | bin/, obj/, *.exe 등 빌드 산출물 무시 설정 |
+
+> **주의**: 빌드 산출물(bin/, obj/, *.exe 등)은 Git에 커밋하지 않습니다.
 
 ---
 
@@ -107,5 +134,4 @@ git submodule update --remote
 ## 📚 관련 문서
 
 - `KIMI.md` - 죠지 핵심 지식
-- `George-Kimi-활용가이드.html` - 상세 가이드
 - `.kimi/skills/` - 죠지 스킬 저장소
