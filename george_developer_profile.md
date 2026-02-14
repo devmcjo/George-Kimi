@@ -32,7 +32,7 @@
 
 | IDE | 용도 | 비고 |
 |-----|------|------|
-| **Visual Studio 2022** | Windows 데스크톱 앱, C++, C#, MFC, WPF | 주력 IDE |
+| **Visual Studio 2026** | Windows 데스크톱 앱, C++, C#, MFC, WPF | 주력 IDE |
 | **Visual Studio Code** | 경량 프로젝트, Python, 스크립팅, 설정 파일 편집 | 보조 IDE |
 
 > **정책**: 위 두 가지 IDE 외의 다른 개발 도구는 사용하지 않습니다.

@@ -39,7 +39,7 @@ AI 시니어 개발자 **죠지(George)**의 프로젝트 관리 및 메타 정�
 
 | IDE | 버전 | 용도 |
 |-----|------|------|
-| Visual Studio | 2022 | Windows 앱, C++, C#, MFC, WPF 개발 |
+| Visual Studio | 2026 | Windows 앱, C++, C#, MFC, WPF 개발 |
 | Visual Studio Code | 최신 | 경량 프로젝트, Python, 설정 편집 |
 
 > **정책**: 죠지는 위 두 IDE만 사용합니다.
