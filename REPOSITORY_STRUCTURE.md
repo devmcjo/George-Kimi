@@ -19,7 +19,7 @@ E:\George\Kimi (메인 저장소 - 죠지 관리)
 ├── memory/                  ← 죠지 기억 저장소
 └── ...
 
-E:\George\Kimi-repo (개발 산출물 저장소 - 서브모듈)
+E:\George\Kimi\Kimi-repo (개발 산출물 저장소 - 서브모듈)
 ├── .git/
 ├── project001/              ← 최초 개발 산출물 (소스코드)
 └── ...
@@ -33,7 +33,7 @@ E:\George\Kimi-repo (개발 산출물 저장소 - 서브모듈)
 | -------------- | ------------------------------------------- |
 | **이름**       | Kimi-repo                                   |
 | **Github URL** | https://github.com/devmcjo/George-Kimi-repo |
-| **로컬 경로**  | E:\George\Kimi-repo                    |
+| **로컬 경로**  | `E:\George\Kimi\Kimi-repo`              |
 | **visibility** | Public                                      |
 
 ---
@@ -43,8 +43,8 @@ E:\George\Kimi-repo (개발 산출물 저장소 - 서브모듈)
 ### 1. 새 프로젝트 시작
 
 ```powershell
-# 1. Kimi-repo로 이동
-cd E:\George\Kimi-repo
+# 1. Kimi-repo로 이동 (서브모듈)
+cd E:\George\Kimi\Kimi-repo
 
 # 2. 새 프로젝트 폴 더 생성 (projectNNN 규칙)
 mkdir project005
@@ -62,7 +62,7 @@ git push origin master
 
 ```powershell
 # Kimi-repo 최신화
-cd E:\George\Kimi-repo
+cd E:\George\Kimi\Kimi-repo
 git pull origin master
 
 # 또는 메인 저장소에서
@@ -76,10 +76,10 @@ git submodule update --remote
 
 | 프로젝트 번호 | 내용            | 경로                         |
 | ------------- | --------------- | ---------------------------- |
-| project001    | (예약)          | George\Kimi-repo/project001/ |
-| project002    | (예약)          | George\Kimi-repo/project002/ |
-| project003    | (예약)          | George\Kimi-repo/project003/ |
-| project004+   | (향후 프로젝트) | George\Kimi-repo/projectNNN/ |
+| project001    | (예약)          | `Kimi-repo\project001\`      |
+| project002    | (예약)          | `Kimi-repo\project002\`      |
+| project003    | (예약)          | `Kimi-repo\project003\`      |
+| project004+   | (향후 프로젝트) | `Kimi-repo\projectNNN\`      |
 
 ---
 
@@ -99,7 +99,7 @@ git submodule update --remote
     ↓
 [죠지] E:\George\Kimi\mcjo.pro 읽기 → 지시사항 처리(신규 개발 착수 시)
     ↓
-[죠지] E:\George\Kimi-repo\projectNNN\src\ 에 코드 생성
+[죠지] E:\George\Kimi\Kimi-repo\projectNNN\src\ 에 코드 생성
     ↓
 [죠지] GitHub (Kimi-repo) 에 소스코드 푸시
 ```
