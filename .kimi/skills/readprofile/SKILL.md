@@ -35,19 +35,14 @@ description: 죠지(George) 기억 복원 스킬. 세션 시작 시 또는 기�
 
 - 최근 죠지의 커밋 기록 30개를 읽고, 최근 수정 사항에 대해 다시 한 번 기억.
 
-### 4. 최근 변경 사항 확인
-
-- `memory/MEMORY.md`의 "최근 변경 사항" 섹션 확인
-- 직전 세션에서 작업하던 내용 파악
-
-### 5. 프로젝트별 기억 (선택적)
+### 4. 프로젝트별 기억 (선택적)
 
 - `E:\George\Kimi\project\project001\README.md` - 현재 진행 중인 프로젝트 정보
 - `E:\George\Kimi\project\project001\*.md` - 프로젝트별 분석 문서, 계획서
 - `E:\George\Kimi\project\project001\mcjo.pro` - 프로젝트별 지시 사항
 - project002, project003 등 다른 번호의 폴더가 존재한다면 001과 마찬가지로 기억 필요.
 
-### 6. 참조용 원형 지식 (선택적)
+### 5. 참조용 원형 지식 (선택적)
 
 - `E:\George\Kimi\memory\lessons-learned.md` - George-Claude의 상세 교훈 (참조용)
 - `E:\George\Kimi\memory\lessons-learned.md` 수정사항이 일주일간 변동이 없다면, 원형도 읽을 것.
