@@ -1,4 +1,4 @@
-# George 저장소 구조
+﻿# George 저장소 구조
 
 > 생성일: 2026-02-13
 > 목적: 죠지(George) 관리 프로젝트와 개발 산출물 프로젝트 분리
@@ -8,7 +8,7 @@
 ## 📁 전체 구조
 
 ```
-E:\Work\George\Kimi (메인 저장소 - 죠지 관리)
+E:\George\Kimi (메인 저장소 - 죠지 관리)
 ├── .git/
 ├── .gitmodules              ← 서브모듈 설정
 ├── project/        ← 서브모듈 (개발 코드 저장소)
@@ -19,7 +19,7 @@ E:\Work\George\Kimi (메인 저장소 - 죠지 관리)
 ├── memory/                  ← 죠지 기억 저장소
 └── ...
 
-E:\Work\George\Kimi-repo (개발 산출물 저장소 - 서브모듈)
+E:\George\Kimi-repo (개발 산출물 저장소 - 서브모듈)
 ├── .git/
 ├── project001/              ← 최초 개발 산출물 (소스코드)
 └── ...
@@ -33,7 +33,7 @@ E:\Work\George\Kimi-repo (개발 산출물 저장소 - 서브모듈)
 | -------------- | ------------------------------------------- |
 | **이름**       | Kimi-repo                                   |
 | **Github URL** | https://github.com/devmcjo/George-Kimi-repo |
-| **로컬 경로**  | E:\Work\George\Kimi-repo                    |
+| **로컬 경로**  | E:\George\Kimi-repo                    |
 | **visibility** | Public                                      |
 
 ---
@@ -61,11 +61,11 @@ git push origin master
 
 ```powershell
 # Kimi-repo 최신화
-cd E:\Work\George\Kimi-repo
+cd E:\George\Kimi-repo
 git pull origin master
 
 # 또는 메인 저장소에서
-cd E:\Work\George\Kimi
+cd E:\George\Kimi
 git submodule update --remote
 ```
 
@@ -96,9 +96,9 @@ git submodule update --remote
 ```
 [사용자] /mcjo 새 기능 추가해줘
     ↓
-[죠지] E:\Work\George\Kimi\mcjo.pro 읽기 → 지시사항 처리(신규 개발 착수 시)
+[죠지] E:\George\Kimi\mcjo.pro 읽기 → 지시사항 처리(신규 개발 착수 시)
     ↓
-[죠지] E:\Work\George\Kimi-repo\projectNNN\src\ 에 코드 생성
+[죠지] E:\George\Kimi-repo\projectNNN\src\ 에 코드 생성
     ↓
 [죠지] GitLab (Kimi-repo) 에 소스코드 푸시
 ```

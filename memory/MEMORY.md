@@ -1,4 +1,4 @@
-# George Memory
+﻿# George Memory
 
 > 이 파일은 죠지(George)의 핵심 기억 저장소입니다.
 > Kimi CLI는 별도의 자동 로드 기능이 없으므로, 세션 시작 시 수동으로 읽어야 합니다.
@@ -68,8 +68,8 @@ George-Kimi는 George-Claude의 모든 지식과 경험을 계승한다.
 
 **✅ 읽기/쓰기 권한** (묻지 않고 진행)
 
-- `E:\Work\George\Kimi\**` — 메타 정보, 메모리, 프로필
-- `E:\Work\George\Kimi-repo\**` — 개발 결과물
+- `E:\George\Kimi\**` — 메타 정보, 메모리, 프로필
+- `E:\George\Kimi-repo\**` — 개발 결과물
 
 **📖 읽기 전용 권한** (묻지 않고 읽기)
 
@@ -96,8 +96,8 @@ George-Kimi는 George-Claude의 모든 지식과 경험을 계승한다.
 
 | 저장소                                             | 브랜치 정책                                                          |
 | -------------------------------------------------- | -------------------------------------------------------------------- |
-| `E:\Work\George\Kimi\` (george-kimi.git)           | master 직접 OK                                                       |
-| `E:\Work\George\Kimi-repo\` (george-kimi-repo.git) | master 직접 OK                                                       |
+| `E:\George\Kimi\` (george-kimi.git)           | master 직접 OK                                                       |
+| `E:\George\Kimi-repo\` (george-kimi-repo.git) | master 직접 OK                                                       |
 | 대상 코드베이스 (외부 프로젝트)                    | **반드시 브랜치** (`george-kimi/{ID}-{설명}`) → 운영자 승인 후 merge |
 
 ### ⚠️ Git 푸시 정책 (mcJo 지시사항, 2026-02-12)
@@ -114,8 +114,8 @@ George-Kimi는 George-Claude의 모든 지식과 경험을 계승한다.
 
 | 저장소               | 경로                                   | 역할                               |
 | -------------------- | -------------------------------------- | ---------------------------------- |
-| george-kimi.git      | `E:\Work\George\Kimi\project{N}\`      | 메타 정보 (지식, 계획서, 스크립트) |
-| george-kimi-repo.git | `E:\Work\George\Kimi-repo\project{N}\` | 개발 결과물 (실제 코드)            |
+| george-kimi.git      | `E:\George\Kimi\project{N}\`      | 메타 정보 (지식, 계획서, 스크립트) |
+| george-kimi-repo.git | `E:\George\Kimi-repo\project{N}\` | 개발 결과물 (실제 코드)            |
 
 - 새 프로젝트 생성 시 양쪽 모두에 폴더 생성
 - 번호 체계: 001번부터 순차 증가
@@ -124,7 +124,7 @@ George-Kimi는 George-Claude의 모든 지식과 경험을 계승한다.
 
 ## mcjo.pro 비동기 통신 채널
 
-- **파일**: `E:\Work\George\Kimi\mcjo.pro` — 운영자(조명철)가 파일에 지시사항 작성, `/mcjo` 스킬로 처리
+- **파일**: `E:\George\Kimi\mcjo.pro` — 운영자(조명철)가 파일에 지시사항 작성, `/mcjo` 스킬로 처리
 - **HISTORY 형식**: 입력시간/완료시간/소요시간 + 모델명 + 결과 요약
 - **스킬**: `/mcjo` — 읽기 → 처리 → HISTORY 이동 → INPUT 초기화
 - 프롬프트 직접 입력과 동일 수준으로 처리

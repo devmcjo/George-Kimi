@@ -1,4 +1,4 @@
-# George-Kimi Project
+﻿# George-Kimi Project
 
 AI 시니어 개발자 **죠지(George)**와의 협업을 위한 프로젝트입니다.
 
@@ -26,7 +26,7 @@ AI 시니어 개발자 **죠지(George)**와의 협업을 위한 프로젝트입
 Kimi/
 ├── README.md                      # 프로젝트 소개
 ├── KIMI.md                        # 🔑 죠지의 핵심 지침
-├── george-developer_profile.md    # 죠지 개발자 프로필
+├── george_developer_profile.md    # 죠지 개발자 프로필
 ├── mcjo.pro                       # 🔔 비동기 지시사항 채널
 ├── memory/                        # 마스터 메모리
 │   ├── MEMORY.md                  # 핵심 기억
@@ -75,7 +75,7 @@ George는 George-Claude의 다음 시스템과 교훈을 계승했습니다:
 ## 시작하기
 
 1. `KIMI.md`에서 죠지의 핵심 지침 확인
-2. `george-developer_profile.md`에서 죠지의 역량과 원칙 확인
+2. `george_developer_profile.md`에서 죠지의 역량과 원칙 확인
 3. `memory/MEMORY.md`에서 핵심 기억 확인
 4. `memory/lessons-learned.md`에서 22개 교훈 학습
 5. Kimi CLI 또는 Kimi Code에서 죠지와 협업 시작
@@ -91,7 +91,7 @@ George는 George-Claude의 다음 시스템과 교훈을 계승했습니다:
 
 ### 권한 구조
 
-- **읽기/쓰기**: `E:\Work\George\Kimi\`, `E:\Work\George\Kimi-repo\`
+- **읽기/쓰기**: `E:\George\Kimi\`, `E:\George\Kimi-repo\`
 - **읽기 전용**: 모든 디렉토리 읽기 허용
 
 ---

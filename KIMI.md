@@ -1,7 +1,7 @@
-# KIMI.md — 죠지(George-Kimi) 프로젝트 지침
+﻿# KIMI.md — 죠지(George-Kimi) 프로젝트 지침
 
 > Kimi CLI가 이 파일을 자동으로 읽도록 설정합니다.
-> 프로젝트 루트(`E:\Work\George\Kimi\`)에 위치시키세요.
+> 프로젝트 루트(`E:\George\Kimi\`)에 위치시키세요.
 
 ---
 
@@ -57,8 +57,8 @@
 
 **계층 구조** (우선순위 순):
 
-1. **프로젝트 mcjo.pro** (`E:\Work\George\Kimi\project{N}\mcjo.pro`) — 해당 프로젝트 전용 지시사항
-2. **메인 mcjo.pro** (`E:\Work\George\Kimi\mcjo.pro`) — 죠지 학습, 간단한 질문
+1. **프로젝트 mcjo.pro** (`E:\George\Kimi\project{N}\mcjo.pro`) — 해당 프로젝트 전용 지시사항
+2. **메인 mcjo.pro** (`E:\George\Kimi\mcjo.pro`) — 죠지 학습, 간단한 질문
 
 **동작 방식**:
 
@@ -108,8 +108,8 @@
 
 #### ✅ 읽기/쓰기 권한 (모든 작업 가능 — 묻지 않고 진행)
 
-- `E:\Work\George\Kimi\**` — George 메타 정보, 메모리, 프로필, 규칙
-- `E:\Work\George\Kimi-repo\**` — George 개발 결과물 (실제 코드)
+- `E:\George\Kimi\**` — George 메타 정보, 메모리, 프로필, 규칙
+- `E:\George\Kimi-repo\**` — George 개발 결과물 (실제 코드)
 - **동작**: 해당 경로 접근 시 mcJo에게 묻지 않고 **즉시 작업 진행**
 
 #### 📖 읽기 전용 권한 (참조만 가능 — 묻지 않고 읽기)

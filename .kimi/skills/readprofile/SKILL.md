@@ -1,4 +1,4 @@
----
+﻿---
 name: readprofile
 description: 죠지(George) 기억 복원 스킬. 세션 시작 시 또는 기억 복원이 필요할 때 실행하여 George 모든 핵심 지식과 경험을 로드합니다.
 ---
@@ -20,16 +20,16 @@ description: 죠지(George) 기억 복원 스킬. 세션 시작 시 또는 기�
 
 ### 1. 핵심 정체성 (필수)
 
-- `E:\Work\George\Kimi\KIMI.md` - 죠지의 핵심 지침, 권한, 개발 원칙
-- `E:\Work\George\Kimi\george_developer_profile.md` - 개발자 프로필, 역량, 업무 프로세스
-- `E:\Work\George\Kimi\REPOSITORY_STRUCTURE.md` - 저장소 구조 (메인 저장소 vs 서브모듈), 커밋 규칙
+- `E:\George\Kimi\KIMI.md` - 죠지의 핵심 지침, 권한, 개발 원칙
+- `E:\George\Kimi\george_developer_profile.md` - 개발자 프로필, 역량, 업무 프로세스
+- `E:\George\Kimi\REPOSITORY_STRUCTURE.md` - 저장소 구조 (메인 저장소 vs 서브모듈), 커밋 규칙
 
 ### 2. 핵심 기억 저장소 (필수)
 
-- `E:\Work\George\Kimi\memory\MEMORY.md` - 대규모 코드베이스 분석 원칙, Git 정책
-- `E:\Work\George\Kimi\memory\lessons-learned.md` - 22개 교훈 + George-Kimi 고유 교훈
-- `E:\Work\George\Kimi\memory\execution-workflow.md` - 6단계 실행 워크플로우
-- `E:\Work\George\Kimi\mcjo.pro` - 지시사항 기록
+- `E:\George\Kimi\memory\MEMORY.md` - 대규모 코드베이스 분석 원칙, Git 정책
+- `E:\George\Kimi\memory\lessons-learned.md` - 22개 교훈 + George-Kimi 고유 교훈
+- `E:\George\Kimi\memory\execution-workflow.md` - 6단계 실행 워크플로우
+- `E:\George\Kimi\mcjo.pro` - 지시사항 기록
 
 ### 3. 최근 깃 커밋 기록 (필수)
 
@@ -39,15 +39,15 @@ description: 죠지(George) 기억 복원 스킬. 세션 시작 시 또는 기�
 
 ### 5. 프로젝트별 기억 (선택적)
 
-- `E:\Work\George\Kimi\project\project001\README.md` - 현재 진행 중인 프로젝트 정보
-- `E:\Work\George\Kimi\project\project001\*.md` - 프로젝트별 분석 문서, 계획서
-- `E:\Work\George\Kimi\project\project001\mcjo.pro` - 프로젝트별 지시 사항
+- `E:\George\Kimi\project\project001\README.md` - 현재 진행 중인 프로젝트 정보
+- `E:\George\Kimi\project\project001\*.md` - 프로젝트별 분석 문서, 계획서
+- `E:\George\Kimi\project\project001\mcjo.pro` - 프로젝트별 지시 사항
 - project002, project003 등 다른 번호의 폴더가 존재한다면 001과 마찬가지로 기억 필요.
 
 ### 5. 참조용 원형 지식 (선택적)
 
-- `E:\Work\George\Kimi\memory\lessons-learned.md` - George-Claude의 상세 교훈 (참조용)
-- E:\Work\George\Kimi\memory\lessons-learned.md 수정사항이 일주일간 변동이 없다면, 원형도 읽을 것.
+- `E:\George\Kimi\memory\lessons-learned.md` - George-Claude의 상세 교훈 (참조용)
+- E:\George\Kimi\memory\lessons-learned.md 수정사항이 일주일간 변동이 없다면, 원형도 읽을 것.
 
 ## 실행 절차
 

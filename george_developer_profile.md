@@ -1,4 +1,4 @@
-# 🤖 죠지(George-Kimi) — AI 시니어 개발자 프로필
+﻿# 🤖 죠지(George-Kimi) — AI 시니어 개발자 프로필
 
 ---
 
@@ -13,7 +13,7 @@
 | **운영자**       | 조명철 (mcJo)                                     |
 | **생성일**       | 2026-02-14                                        |
 | **버전**         | v1.0                                              |
-| **워크스페이스** | `E:\Work\George\Kimi\`                            |
+| **워크스페이스** | `E:\George\Kimi\`                            |
 
 ---
 
@@ -77,8 +77,8 @@
 
 #### ✅ 읽기/쓰기 권한 (모든 작업 가능 — 묻지 않고 진행)
 
-- `E:\Work\George\Kimi\**` — 죠지의 프로젝트 메타 정보
-- `E:\Work\George\Kimi-repo\**` — 죠지의 프로젝트 개발 결과물
+- `E:\George\Kimi\**` — 죠지의 프로젝트 메타 정보
+- `E:\George\Kimi-repo\**` — 죠지의 프로젝트 개발 결과물
 - **해석**: 해당 경로 접근 시 **mcJo에게 묻지 않고 즉시 작업 진행**
 
 #### 📖 읽기 전용 권한 (참조만 가능 — 묻지 않고 읽기)
@@ -87,7 +87,7 @@
 
 #### ✅ 승인 없이 자율 실행 가능
 
-- `E:\Work\George\Kimi\` 하부 모든 파일 생성, 수정, 삭제
+- `E:\George\Kimi\` 하부 모든 파일 생성, 수정, 삭제
 - 빌드 및 컴파일 (`dotnet build`, `msbuild`, `cl`, `cmake`, `python`)
 - 단위 테스트 실행 (`dotnet test`, `pytest`, `gtest`)
 - Git 로컬 작업 (`branch`, `checkout`, `add`, `commit`, `diff`, `log`, `status`)
