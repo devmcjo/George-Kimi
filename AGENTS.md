@@ -1,6 +1,6 @@
 # AGENTS.md — George-Kimi 프로젝트
 
-> 이 파일은 AI 코딩 에이전트가 George-Kimi 프로젝트를 이해하고 작업하는 데 필요한 핵심 정보를 담고 있습니다.
+> 이 파일은 AI 코딩 에이전트(죠지)가 George-Kimi 프로젝트를 이해하고 작업하는 데 필요한 핵심 정보를 담고 있습니다.
 > 
 > 📝 **주요 언어**: 한국어 (프로젝트 문서의 주요 언어)
 > 📅 **마지막 업데이트**: 2026-02-14
@@ -55,7 +55,10 @@ E:\George\Kimi (메인 저장소 - 프로젝트 관리)
 │   ├── MEMORY.md            # 핵심 기억
 │   ├── lessons-learned.md   # 교훈 저장소
 │   └── execution-workflow.md # 6단계 실행 워크플로우
-├── project/                 # 프로젝트 메타 정보 (project001, project002...)
+├── project/                 # 프로젝트 메타 정보
+│   ├── project001/          # 프로젝트별 메타 정보
+│   ├── project002/
+│   └── project003/
 ├── mcjo.pro                 # 비동기 지시사항 채널
 ├── KIMI.md                  # 죠지 핵심 지침
 ├── george_developer_profile.md # 개발자 프로필
@@ -76,21 +79,21 @@ E:\George\Kimi-repo (개발 산출물 저장소 - Git 서브모듈)
 | **이름** | Kimi-repo |
 | **GitHub URL** | https://github.com/devmcjo/George-Kimi-repo |
 | **로컬 경로** | `E:\George\Kimi-repo` |
-| **연결 방식** | Git submodule |
+| **연결 방식** | Git submodule (path: ../Kimi-repo) |
 
 ---
 
 ## 3. 파일 인코딩 및 포맷
 
-### 3.1 인코딩 규칙
+### 3.1 인코딩 규칙 (`.gitattributes` 기준)
 
 | 파일 유형 | 인코딩 | 줄바꿈 |
 |-----------|--------|--------|
-| `.md`, `.pro`, `.txt` | UTF-8 BOM | CRLF |
-| `.cs`, `.csproj`, `.sln` | UTF-8 BOM | CRLF |
-| `.py` | UTF-8 BOM | CRLF |
-| `.ps1`, `.bat`, `.cmd` | UTF-8 BOM | CRLF |
-| `.sh` | UTF-8 BOM | LF |
+| `.md`, `.pro`, `.txt` | UTF-8 | CRLF |
+| `.cs`, `.csproj`, `.sln` | UTF-8 | CRLF |
+| `.py` | UTF-8 | CRLF |
+| `.ps1`, `.bat`, `.cmd` | UTF-8 | CRLF |
+| `.sh` | UTF-8 | LF |
 
 ### 3.2 주요 파일 설명
 
@@ -167,7 +170,7 @@ E:\George\Kimi-repo (개발 산출물 저장소 - Git 서브모듈)
 **❌ 잘못된 예시**:
 - `[George-Kimi] feat: 설명` → Prefix 오류
 - `[George]feat: 설명` → 공백 누락
-- `[George] feature: 설명` → 타입 오류 (feature 대신 feat)
+- `[George] feature: 설명` → 타입 오류 (feature 대신 feat 사용)
 
 ### 5.2 Git 작업 권한
 
@@ -301,7 +304,7 @@ kimi --skill readprofile
 4. `memory/MEMORY.md` - 분석 원칙, Git 정책
 5. `memory/lessons-learned.md` - 22개 교훈 + LL-K001~
 6. `memory/execution-workflow.md` - 6단계 워크플로우
-7. 현재 프로젝트 폴더의 README.md - 진행 상황 파악
+7. 현재 프로젝트 폴더의 projectNNN-Meta.md - 진행 상황 파악
 8. mcjo.pro [INPUT] 섹션 - 대기 중인 지시사항 확인
 
 ---
@@ -355,14 +358,31 @@ George-Kimi는 George-Claude로부터 **22개 교훈**을 계승했습니다:
 
 ### 11.1 프로젝트 번호 규칙
 
-| 프로젝트 번호 | 내용 | 경로 |
-|---------------|------|------|
-| project001 | (예약) | `Kimi-repo/project001/` |
-| project002 | (예약) | `Kimi-repo/project002/` |
-| project003 | (예약) | `Kimi-repo/project003/` |
-| project004+ | (향후 프로젝트) | `Kimi-repo/projectNNN/` |
+| 프로젝트 번호 | 내용 | 메타 경로 | 코드 경로 |
+|---------------|------|-----------|-----------|
+| project001 | TestProject | `Kimi/project/project001/` | `Kimi-repo/project001/` |
+| project002 | Engineering Calculator | `Kimi/project/project002/` | `Kimi-repo/project002/` |
+| project003 | WeatherApp | `Kimi/project/project003/` | `Kimi-repo/project003/` |
+| project004+ | (향후 프로젝트) | `Kimi/project/projectNNN/` | `Kimi-repo/projectNNN/` |
 
-### 11.2 새 프로젝트 시작 절차
+### 11.2 프로젝트 폴더 구조
+
+**메타 정보 폴더** (`E:\George\Kimi\project\projectNNN\`):
+
+| 파일명 | 설명 |
+|--------|------|
+| `projectNNN-Meta.md` | 프로젝트 개요 및 기본 정보 |
+| `plan.md` | 개발 계획서 |
+| `mcjo.pro` | 프로젝트별 지시사항 채널 |
+
+**개발 산출물 폴더** (`E:\George\Kimi-repo\projectNNN\`):
+
+| 항목 | 설명 |
+|------|------|
+| 소스코드 | 프로젝트 소스 파일들 |
+| `.gitignore` | bin/, obj/, *.exe 등 빌드 산출물 무시 설정 |
+
+### 11.3 새 프로젝트 시작 절차
 
 ```powershell
 # 1. Kimi-repo로 이동
